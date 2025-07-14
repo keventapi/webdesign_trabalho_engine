@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>base</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "styles/base.css" %}">
+    </head>
+    <body>
+
+       <header>
+            <img src="{% static "imgs/hollow-knight-icon.png" %}" id="HollowKnightIcon">
+            <div id="HeaderText">
+                <h1> Hollow knight </h1> <br>
+                <h2> wiki </h2>
+            </div>
+            <img src="{% static "imgs/teamcherry-icon.png" %}" id="TeamCherryLogo">
+       </header>
+
+        <div>
+            <h1 id="topico"> Topico </h1>
+            
+            <div id="block">
+                <div id="NavBar">
+                    <div id="NavBarTitle">
+                        <h1>Navegue por</h1>
+                        <h2>Hollow Knight</h2>
+                        <img src="{% static "imgs/decorator.png" %}" id="NavBarImgDecorator">
+                    </div>
+
+                    <div id="NavBarContent">
+                        <ul>
+                            <li><img src="{% static "imgs/inicio-icon.png" %}" class="NavBarIcon"><span>Inicio</span></li>
+                            <li><img src="{% static "imgs/mundo-icon.png" %}" class="NavBarIcon"><span>Mundo</span></li>
+                            <li><img src="{% static "imgs/items-icon.png" %}" class="NavBarIcon"><span>Itens e Habilidades</span></li>
+                            <li><img src="{% static "imgs/exploração-icon.png" %}" class="NavBarIcon"><span>Exploração</span></li>
+                            <li><img src="{% static "imgs/inimigos-icon.png" %}" class="NavBarIcon"><span>Inimigos e Chefes</span></li>
+                        </ul>
+                    </div>
+
+                    <img src="{% static "imgs/navbar-avatar.png" %}" id="NavBarAvatar">
+                </div>
+
+
+                <div id="content">
+                    <div id="ContentPageNavBar">
+                        <ul id="PageNavBar">
+                            <li>Introdução</li>
+                            <li>Objetivo</li>
+                            <li>Indice</li>
+                            <li>Destaques</li>
+                        </ul>
+                    </div>
+                    
+                    <h1 class="HeadSubtopico">subtopico</h1>
+                    <div class="subtopico">    
+                        <p class="ParagraphContent">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                        <div class="ImgContainer">
+                            <img src="{% static "imgs/teste.png" %}" class="ImgSubtopico">
+                            <span> info sobre a imagem </span>
+                        </div>
+                    </div>
+
+                    <div class="subtopico">
+                        <p class="ParagraphContent">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+       <footer>
+            <span class="FooterContent">Lorem Ipsum is simply dummy text of text.</span>
+            <span class="FooterContent">Lorem Ipsum is simply dummy text of text.</span>
+            <span class="FooterContent">Lorem Ipsum is simply dummy text of text.</span>
+            <span class="FooterContent">Lorem Ipsum is simply dummy text of text.</span>
+            <span class="FooterContent">Lorem Ipsum is simply dummy text of text.</span>
+       </fotter>
+    </body>
+</html>
