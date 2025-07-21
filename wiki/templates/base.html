@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>base</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "styles/base.css" %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="flex">
+                <div class="flex">
+                    <img src="{% static "img/hollow-knight-icon.png" %}" class="page-icon">
+                    <div class="flex">
+                        <h1> Hollow knight </h1>
+                        <h2> wiki </h2>
+                    </div>
+                </div>
+                <img src="{% static "img/teamcherry-icon.png" %}" class="developer-logo">
+        </header>
+        <hr class="headerbar">
+        <main class="flex">
+            <div class="flex topico">
+                <img src="{% static "img/topico-vector.png" %}" alt="tópico vector">
+                <h1>Tópico</h1>
+            </div>
+            <nav class="flex nav-main">
+                <div class="flex nav-tittle">
+                    <h3>Navegue por:</h3>
+                    <h2>Hollow Knight</h2>
+                    <img src="{% static "img/decorator.png" %}" alt="decorador de titulo">
+                </div>
+                <ul class="flex">
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/hollow-knight-icon.png" %}" alt="inicio icone"><a href="">Início</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/mundo-icon.png" %}" alt="mundo icone"><a href="">Mundo</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/items-icon.png" %}" alt="itens e habilidades icone"><a href="">Itens e Habilidades</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/exploração-icon.png" %}" alt="exploração icone"><a href="">Exploração</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/inimigos-icon.png" %}" alt="Inimigos e chefes icone"><a href="">Inimigos e Chefes</a></li>
+                </ul>
+                <img src="{% static "img/navbar-avatar.png" %}" alt="hollow knight personagem">
+            </nav>
+            <div class="flex container">
+                <nav class="flex nav-inter">
+                    <ul class="flex">
+                        <li><a href="">Introdução</a></li>
+                        <li><a href="">Objetivo</a></li>
+                        <li><a href="">Indice</a></li>
+                        <li><a href="">Destaques</a></li>
+                    </ul>
+                </nav>
+                <section class="flex">
+                    <div class="flex subtopico">
+                        <img src="{% static "img/subtopico-vector.png" %}" alt="subtopico vector">
+                        <h2>Subtopico</h2>
+                    </div>
+                    <div class="flex conteudo">
+                        <div class="row first">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maxime dolores molestiae. Quas est blanditiis sint nulla, at amet inventore accusantium quae! At quas fuga fugiat ipsa laboriosam cupiditate praesentium ratione aut velit, nisi distinctio aliquid consectetur alias minus deserunt perferendis dicta animi qui! Asperiores suscipit molestiae, iure maxime dolorum laudantium adipisci voluptas, provident incidunt repellat ipsa voluptate. Fuga corporis magnam distinctio adipisci veritatis iusto, facere recusandae et laudantium itaque natus optio libero beatae excepturi aperiam fugit error! Praesentium, ut?</p>
+                            <div class="flex">
+                                <img src="{% static "img/teste.png" %}" alt="">
+                                <p>legenda</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo qui nam omnis ipsam animi voluptas est eveniet impedit distinctio earum nisi porro quam fugiat sunt nesciunt molestiae quia, maiores ab sint illo. Culpa suscipit libero voluptatem repudiandae accusantium placeat voluptate nostrum dignissimos dolor reiciendis assumenda molestiae officiis id impedit, consectetur ea aliquam ut, debitis, pariatur officia? Laborum nulla quisquam nemo laboriosam optio similique autem excepturi pariatur omnis, consectetur iusto voluptates ad sequi error, dolore in officia obcaecati cumque aperiam corporis qui necessitatibus deserunt veniam. Corporis porro rem fuga dolorum nulla repudiandae obcaecati ipsa unde ullam ratione officiis sit sint vero nisi, impedit beatae hic, cupiditate omnis facilis quidem! Natus, temporibus, atque nulla veniam neque ipsum maxime excepturi et dolorem libero, odio exercitationem odit commodi repellat. Nihil error excepturi laboriosam porro! Maxime magnam mollitia aliquam nihil sapiente? Rerum, eius possimus, ipsam necessitatibus voluptas pariatur quia facere explicabo minus eveniet eligendi. Odit?</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="flex">
+                    <div class="flex subtopico">
+                        <img src="{% static "img/subtopico-vector.png" %}" alt="subtopico vector">
+                        <h2>Tabela base</h2>
+                    </div>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Icone</th>
+                            <th>Nome</th>
+                            <th>Efeito</th>
+                            <th>Custo em Notches</th>
+                        </tr>
+                        <tr>
+                            <td> Img </td>
+                            <td>Wayward Compass</td>
+                            <td>Exibe a posição do jogador no mapa (requer o mapa da área)</td>
+                            <td>1 notch</td>
+                        </tr>
+                        <tr>
+                            <td> Img </td>
+                            <td>Shaman Stone</td>
+                            <td>Aumenta o dano de feitiços mágicos</td>
+                            <td>2 notches</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section class="flex">
+                    <div class="flex subtopico">
+                        <img src="{% static "img/subtopico-vector.png" %}" alt="subtopico vector">
+                        <h2>card base</h2>
+                    </div>
+                    <br>
+
+                    <div class="chefe-container">
+                        <p>Forjado em eras esquecidas, o Cavaleiro Sentinela é um guardião imortal que vigia os Portões de Runaetérnia. Revestido por uma armadura ancestral e movido por pura vontade arcana, ele jamais abandona seu posto — atacando qualquer um que ouse ultrapassá-lo.
+O Cavaleiro Sentinela é um desafio para jogadores impacientes. Suas defesas são quase impenetráveis, e ele pune ataques precipitados com contra-golpes brutais. Esperar o momento certo para atacar é a chave da vitória.</p>
+                        <div class="card-container">
+                            <article class="boss-card">
+                                <img src="{% static 'img/teste.png' %}" alt="Imagem do chefe: Guardião Arcano" class="boss-image" />                
+                                <section class="boss-info">
+                                <h2>Info sobre o chefe</h2>
+                                <ul>
+                                    <li><strong>Categoria:</strong> Guardião Arcano</li>
+                                    <li><strong>Atributo dominante:</strong> Defesa física pesada</li>
+                                    <li><strong>Vulnerável a:</strong> Magia elemental (fogo e eletricidade)</li>
+                                </ul>
+                                </section>                  
+                                <section class="boss-skills">
+                                <h2>Skills</h2>
+                                <ul>
+                                    <li><strong>Murro Imóvel:</strong> golpe devastador que empurra e atordoa o inimigo.</li>
+                                    <li><strong>Muralha de Runa:</strong> invoca uma barreira mágica que bloqueia ataques frontais.</li>
+                                    <li><strong>Olhar do Vigia:</strong> revela inimigos invisíveis e anula furtividade.</li>
+                                </ul>
+                                </section>
+                            </article>
+                        </div>
+
+                    </div>
+                    
+                   
+
+
+                </section>
+
+            </div>
+        </main>
+        <footer class="flex">
+            <div class="flex">
+                <div class="flex contatos">
+                    <h3>Contatos</h3>
+                    <p>Email: contact@teamcherry.com.au</p>
+                    <div class="flex">
+                        <a href="https://twitter.com/TeamCherryGames" target="_blank"><img src="{% static "img/twitter.png" %}" alt="twitter icon"></a>
+                        <a href="https://www.youtube.com/user/teamcherrygames" target="_blank"><img src="{% static "img/youtube.png" %}" alt="youtube icon"></a>
+                        <a href="https://www.facebook.com/teamcherrygames" target="_blank"><img src="{% static "img/facebook.png" %}" alt="facebook icon"></a>
+                    </div>
+                </div>
+                <div class="flex logos">
+                    <img src="{% static "img/hollow-knight-icon.png" %}">
+                    <img src="{% static "img/teamcherry-icon.png" %}">
+                </div>
+                <a href="#" class="footer-feedback">Deixe <br> seu feedback!</a>
+            </div>
+            <p>© 2025 Hollow Knight Wiki  - Todos os direitos reservados à Team Cherry</p>
+        </footer>
+    </body>
+</html>
