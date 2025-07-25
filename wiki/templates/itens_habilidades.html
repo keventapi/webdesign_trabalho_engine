@@ -11,6 +11,128 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+
+        <style>
+        
+            .carrossel-container {
+  position: relative;
+  width: 300px; /* Adjust as needed */
+  overflow: hidden;
+  margin: auto;
+}
+
+.carrossel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.card { /* This class seems unused in your provided HTML. Ensure it's applied to your card elements if intended for styling. */
+  flex: 0 0 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  width:100%;
+}
+.carrossel-track  .card {
+    flex: 0 0 100%;
+    width: 300px;
+    max-width: 100%;
+    box-sizing: border-box; 
+    
+    /* Zere o padding horizontal para o card do carrossel */
+    padding-left: 0;
+    padding-right: 0;
+    /* Mantenha seu padding vertical de 15px top e 25px bottom */
+    padding-top: 15px;
+    padding-bottom: 25px;
+
+    
+}
+.carrossel-container {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  margin: auto;
+  padding: 0 10px; /* Adiciona 10px de padding nas laterais */
+  box-sizing: border-box; /* Garante que o padding não aumente o width total */
+}
+
+.carrossel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  /* Se o container tem padding, a trilha precisa ser maior que o container "visível"
+     ou o translateX precisa ser ajustado. Geralmente, a Opção 1 é mais direta. */
+}
+    .card img {
+        max-width: 100%; /* Garante que as imagens não estourem o card */
+        height: auto;
+        /* ... outros estilos de imagem ... */
+    }
+
+/* Hide radio inputs */
+input[type="radio"][name="carrossel"] {
+  display: none;
+}
+
+/* Dynamically move carousel based on checked radio button */
+{% for skill in skills %}
+#slide{{ forloop.counter }}:checked ~ .carrossel-container .carrossel-track {
+  transform: translateX(-{{ forloop.counter0|add:"0" }}00%);
+}
+{% endfor %}
+
+/* Navigation dots (optional, as you're adding prev/next buttons) */
+.nav-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10; /* Ensure dots are above other elements if they overlap */
+}
+
+.nav-dots label {
+  background: black;
+  color: white;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* New styles for previous/next buttons */
+.carrossel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 10px; /* Add some padding from the edges */
+  box-sizing: border-box; /* Include padding in width calculation */
+  z-index: 10; /* Ensure controls are above other elements */
+}
+
+.carrossel-control-button {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%; /* Make them circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1; /* Adjust line height for better vertical alignment of content */
+  transition: background 0.3s ease;
+}
+
+.carrossel-control-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+        </style>
     </head>
     <body>
         <header class="flex">
@@ -68,10 +190,9 @@
 Esses equipamentos são essenciais para adaptar a gameplay ao estilo do jogador, facilitando combates, movimentação ou coleta de recursos.</p>
                         </div>
 
-                        <div class="row subtopico-conteudo">
+                        <div class="subtopico-conteudo">
                             <h1>1- Amuletos</h1>
                             <p>Os amuletos são artefatos místicos que o Cavaleiro pode equipar em bancos, utilizando um recurso chamado Notches (entalhes). Cada amuleto ocupa um número específico de entalhes, e combinar os certos pode alterar drasticamente a experiência de jogo.</p>
-      
                             <table>
                                 <tr>
                                     <th>Icone</th>
@@ -90,7 +211,7 @@ Esses equipamentos são essenciais para adaptar a gameplay ao estilo do jogador,
                             </table>
                         </div>
 
-                        <div class="row subtopico-conteudo">
+                        <div class="subtopico-conteudo">
                             <h1>2- Mascaras Vessels e Pale Ores</h1>
                             <p>Ao longo da jornada, o Cavaleiro pode melhorar seus atributos vitais encontrando fragmentos de máscaras, vessels e o precioso item conhecido como Pale Ore. Esses itens são fundamentais para aumentar a sobrevivência e a capacidade de exploração do jogador.</p>
 
@@ -142,10 +263,71 @@ Esses equipamentos são essenciais para adaptar a gameplay ao estilo do jogador,
                             </table>
                         </div>
 
+                    <div class="subtopico-conteudo"> 
+                        <h1>3- skilss</h1>
+                        <br>
+                        {% for skill in skills %}
+                        <input type="radio" name="carrossel" id="slide{{ forloop.counter }}" {% if forloop.first %}checked{% endif %}>
+                        {% endfor %}
+
+                        <div class="carrossel-container">
+                            <div class="carrossel-track" style="width: {{ skills|length|add:"0" }}00%;">
+                                {% for skill in skills %}
+                                <div class="card"> 
+                                    <div class="flex card">
+                                        <img src="{{ skill.img.url }}" alt="{{ skill.name }}">
+                                        <div class="flex">
+                                            <h4>nome</h4>
+                                            <p>{{ skill.nome}}</p>
+                                        </div>
+                                        <div class="flex">
+                                            <h4>Efeito</h4>
+                                            <p>{{ skill.efeito }}</p>
+                                        </div>
+                                        <div class="flex">
+                                            <h4>Localização</h4>
+                                            <p>{{ skill.localizacao }}</p>
+                                        </div>
+                                        <div class="flex">
+                                            <h4>Observação</h4>
+                                            <p>{{ skill.observacao }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+
+                            <div class="carrossel-controls">
+                                <label for="prevButton" class="carrossel-control-button" id="prevButton"><</label>
+                                <label for="nextButton" class="carrossel-control-button" id="nextButton">></label>
+                            </div>
+                            </div>
+                    <div class="subtopico-conteudo">
+                        <h1> artes do ferrão</h1>
+                        <br>
+                        <table>
+                                <tr>
+                                    <th>Icone</th>
+                                    <th>Nome</th>
+                                    <th>Efeito</th>
+                                    <th>Mestre</th>
+                                    <th>Localização</th>
+                                </tr>
+                                {% for arte in artes %}
+                                    <tr>         
+                                        <td> <img src="{{arte.img.url}}" alt="{{arte.nome}}" style="width: 32px; height: 32px;"> </td>
+                                        <td>{{arte.nome}}</td>
+                                        <td>{{arte.efeito}}</td>
+                                        <td>{{arte.mestre}}</td>
+                                        <td>{{arte.localizacao}}</td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                            </div>
+                    </div>
+                        </div>
                     </div>
                 </section>
-                </section>
-
             </div>
         </main>
         <footer class="flex">
@@ -167,5 +349,43 @@ Esses equipamentos são essenciais para adaptar a gameplay ao estilo do jogador,
             </div>
             <p>© 2025 Hollow Knight Wiki  - Todos os direitos reservados à Team Cherry</p>
         </footer>
+        <script>
+            // JavaScript for handling previous/next buttons
+            document.addEventListener('DOMContentLoaded', function() {
+                const radioButtons = document.querySelectorAll('input[name="carrossel"]');
+                const prevButton = document.getElementById('prevButton');
+                const nextButton = document.getElementById('nextButton');
+                const totalSlides = radioButtons.length;
+                let currentSlideIndex = 0;
+
+                // Initialize currentSlideIndex based on initially checked radio button
+                // It's important to find the *index* of the initially checked button.
+                radioButtons.forEach((radio, index) => {
+                    if (radio.checked) {
+                        currentSlideIndex = index;
+                    }
+                });
+
+                function updateCarousel() {
+                    // Ensure the index is within bounds (0 to totalSlides - 1)
+                    if (currentSlideIndex < 0) {
+                        currentSlideIndex = totalSlides - 1;
+                    } else if (currentSlideIndex >= totalSlides) {
+                        currentSlideIndex = 0;
+                    }
+                    radioButtons[currentSlideIndex].checked = true;
+                }
+
+                prevButton.addEventListener('click', function() {
+                    currentSlideIndex--; // Decrement index
+                    updateCarousel();
+                });
+
+                nextButton.addEventListener('click', function() {
+                    currentSlideIndex++; // Increment index
+                    updateCarousel();
+                });
+            });
+        </script>
     </body>
 </html>
