@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Amuleto, Skill, ArteDoFerrao, Chefe, Npc, InimigoComum, MiniChefe
+from .models import Amuleto, Skill, ArteDoFerrao, Chefe, Npc, InimigoComum, MiniChefe, Exploracao
 # Create your views here.
 def index(request):
     return render(request, 'base.html')
@@ -50,3 +50,21 @@ def inimigos_chefes(request):
     print(chefes_detail)
     context = {"inimigos": inimigos, "chefes": chefes_detail, "minichefes": minichefes}
     return render(request, "inimigos.html", context)
+
+
+
+def exploracao(request):
+    mapas_detail = []
+    mapas = Exploracao.objects.all()
+    for mapa in mapas:
+        npcs_list = []
+        inimigos_list = []
+        npcs = mapa.npcs.all()
+        inimigos = mapa.chefes.all()
+        for npc in npcs:
+            npcs_list.append(npc.nome)
+        for inimigo in inimigos:
+            inimigos_list.append(inimigo.nome)
+        mapas_detail.append({'mapaojc': mapa, 'npc_list': npcs_list, 'inimigos_list': inimigos_list})
+    context = {'mapas': mapas_detail}
+    return render(request, "exploracao.html", context)

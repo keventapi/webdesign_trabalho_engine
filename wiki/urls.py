@@ -4,5 +4,6 @@ urlpatterns = [
     path('', views.index),
     path('items', views.items_habilidades),
     path('mundo', views.mundo),
-    path('inimigos', views.inimigos_chefes)
+    path('inimigos', views.inimigos_chefes),
+    path('exploracao', views.exploracao)
 ]
