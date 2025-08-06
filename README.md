@@ -70,7 +70,7 @@ As rotas disponíveis no projeto são:
 
 O layout e o fluxo do site foram projetados no Figma antes do desenvolvimento.
 
-🔗 [Visualizar wireframe no Figma](#) <!-- Substitua com o link real quando publicar -->
+🔗 [Visualizar wireframe no Figma](https://www.figma.com/design/0wp0fUqoHksAeCDTFkCjrv/WebDesign---Wireframe-Fandom?node-id=0-1&t=OfjX8udqV08OwnxE-0) <!-- Substitua com o link real quando publicar -->
 
 ---
 
