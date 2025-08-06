@@ -1,0 +1,767 @@
+:root {
+    font-family: "Outfit", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #154164 21%, #164266 39%, #002340 72%, #000000 100%);
+    background-attachment: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+header{
+    width: 869px;
+    height: 190px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 42px 0 42px;
+    background-color: rgba(38, 37, 37, 0.35);
+    border-radius: 20px;
+    margin: 20px 0 8px 0;
+    position: relative;
+    box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+header div div{
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1, h2 {
+    margin: 0;
+    height: 27px;
+}
+
+header h1 {
+    font-size: 1.875rem; 
+}
+
+header h2 {
+    font-size: 1.375rem;
+    font-weight: 200;
+}
+
+.headerbar {
+    width: 907px;
+    height: 7px;
+    border-radius: 3px;
+    background-color: rgb(217, 217, 217);
+}
+
+.page-icon {
+    width: 147px;
+    height: 140px;
+    margin-right: 60px;
+}
+
+.developer-logo {
+    width: 74px;
+    height: 60px;
+    object-fit: cover;
+}
+
+main {
+    margin-top: 50px;
+    width: 869px;
+    border-radius: 30px;
+    background-color: rgba(26, 25, 25, 0.1);
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.nav-inter {
+    width: 465px;
+    height: 23px;
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.95); 
+    border-radius: 8px;
+    justify-content: center; 
+    position: sticky;
+    top: 10px;
+}
+
+.nav-inter ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-gap: 20px; 
+}
+
+.nav-inter a {
+    text-decoration: none;
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-size: 0.8125rem;
+    font-weight: normal;
+}
+
+a:hover{
+    font-weight: 480;
+}
+
+section {
+    width: 100%;
+    padding: 0 50px 0 50px;
+    flex-direction: column;
+}
+
+.apresentation {
+    margin-top: 90px;
+    margin-bottom: 35px;
+    row-gap: 55px;
+}
+
+.apresentation img {
+    width: 375px;
+    border-radius: 17px;
+}
+
+.apresentation .tittle {
+    width: 50%;
+    align-items: center;
+    align-items: center;
+}
+
+.apresentation-bar {
+    width: 827px;
+    height: 6.27px;
+    background-color: rgb(217, 217, 217);
+}
+
+.first {
+    column-gap: 20px;
+    align-items: center;
+}
+
+.first h1 {
+    margin: 0;
+    font-size: 3.3125rem;
+    font-weight: 400;
+}
+
+.first h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.95rem;
+    font-weight: 200;
+    text-decoration: underline;
+}
+
+.first div {
+    width: 266px;
+    flex-direction: column;
+}
+
+.first div p {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.subtopico h3 {
+    font-size: 1.25rem;
+    font-weight: 650;
+    margin: 0 35px 60px;
+}
+
+.subtopico div {
+    column-gap: 35px;
+}
+
+.subtopico p {
+    width: 437px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    text-align: justify;
+}
+
+#introducao {
+    margin-top: 55px;
+    margin-bottom: 35px;
+}
+
+#introducao img {
+    width: 297px;
+    border-radius: 17px;
+}
+
+#objetivo {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+#objetivo div {
+    width: 750px;
+    align-items: center;
+    align-self: flex-end;
+}
+
+#objetivo img {
+    width: 276px;
+    border-radius: 17px;
+}
+
+#indice {
+    margin-top: 30px;
+    margin-bottom: 85px;
+}
+
+#indice h3 {
+    margin: 0 20px 20px;
+}
+
+#indice a {
+    color: white;
+    text-decoration: none;
+}
+
+#indice ul li{
+    font-family: "Inter", sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 300;
+}
+
+#indice > div {
+    width: 543px;
+    flex-direction: column;
+    background-color: rgba(12, 14, 28, 0.4);
+    border-radius: 15px;
+    padding: 15px 0 70px 0;
+}
+
+.list-pag {
+    flex-direction: column;
+    row-gap: 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 350;
+    margin: 0 50px;
+}
+
+.indice-bar {
+    width: 558px;
+    height: 5px;
+    background-color: rgb(217, 217, 217);
+}
+
+#feedback {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+form {
+    padding: 0 50px 0 50px;
+    column-gap: 80px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: center;
+}
+
+label {
+    margin-bottom: 5px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 1px 2px 3px 2px  rgba(0, 0, 0, 0.25);
+}
+
+textarea {
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 180px;
+    min-height: 180px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 1px 2px 3px 2px  rgba(0, 0, 0, 0.25);
+}
+
+button {
+    margin-top: 30px;
+    width: 163px;
+    height: 28px;
+    border-radius: 6px;
+    border: 0;
+    box-shadow: 1px 2px 2px 1px  rgba(0, 0, 0, 0.25);
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+button:hover {
+    box-shadow: 1px 2px 4px 4px  rgba(0, 0, 0, 0.40);
+}
+
+.column {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 265px;    
+}
+
+.row p {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    width: 40%;
+    margin-left: 40px;
+    text-align: center;
+}
+
+footer {
+    width: 800px;
+    height: 130px;
+    margin: 80px auto 60px auto;
+    padding: 10px 50px 10px 50px;
+    border-radius: 20px;
+    background-color: rgba(38, 37, 37, 0.35);
+    box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+footer > div {
+    width: 100%;
+}
+
+.contatos {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.contatos h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 15px;
+}
+
+.contatos div {
+    column-gap: 20px;
+}
+
+.contatos img {
+    width: 17px;
+}
+
+.logos {
+    margin: 0 180px 0 80px;
+}
+
+.logos img:first-child{ 
+    width: 50px;
+    object-fit: contain;
+}
+
+.logos img {
+    width: 74px;
+    object-fit: contain;
+}
+
+.footer-feedback {
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    align-self: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+@media (max-width: 920px) {
+    header{
+        width: 720px;
+        height: 165px;
+    }
+
+    .headerbar {
+        width: 760px;
+    }
+
+    main {
+        width: 720px;
+    }
+
+    section{
+        padding: 0;
+    }
+
+    .apresentation {
+        row-gap: 45px;
+    }
+
+    .apresentation img {
+        width: 300px;
+    }
+
+    .apresentation-bar {
+        width: 680px;
+        border-radius: 5px;
+    }
+
+    .first {
+        width: 95%;
+        column-gap: 10px;
+        justify-content: center;
+    }
+
+    #introducao > div, #objetivo > div {
+        justify-content: center;
+    }
+
+    #introducao p, #objetivo p {
+        width: 400px;
+    }
+
+    #introducao img {
+        width: 220px;
+        height: 140px;
+        
+    }
+
+    #objetivo img {
+        width: 220px;
+        align-self: flex-start;
+    }
+
+    #objetivo p {
+        margin-top: 0;
+    }
+
+    #indice {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer {
+        width: 720px;
+        padding: 10px 25px 10px 25px;
+    }
+
+    .logos {
+        margin-left: 60px;
+        margin-right: 150px;
+    }
+}
+
+@media (max-width: 720px) {
+    header{
+        width: 530px;
+        height: 165px;
+    }
+
+    header h1 {
+    font-size: 2.275rem; 
+    }
+
+    header h2 {
+        font-size: 1.775rem;
+    }
+
+    header h1, h2 {
+        margin: 0;
+        height: 30px;
+    }
+
+    .page-icon {
+        display: none;
+    }
+
+    .developer-logo {
+        width: 80px;
+    }
+
+    .headerbar {
+        width: 545px;
+    }
+
+    main {
+        width: 530px;
+    }
+
+    section{
+        padding: 0;
+    }
+
+    .apresentation {
+        row-gap: 45px;
+    }
+    
+    .apresentation p {
+        width: 290px;
+        margin: 0;
+    }
+
+    .apresentation .tittle {
+        width: 100%;
+    }
+
+    .apresentation > div:last-child {
+        justify-content: center;
+    }
+
+    .apresentation-bar {
+        width: 480px;
+        border-radius: 5px;
+    }
+
+    .first {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .first h1 {
+        font-size: 3.9125rem;
+    }
+
+    .first h2 {
+        font-size: 2.35rem;
+    }
+
+    .first > div:last-child{
+        display: none;
+    }
+
+    #introducao > div, #objetivo > div {
+        width: 100%;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    #introducao p, #objetivo p {
+        width: 470px;
+        margin: 0;
+    }
+
+    #introducao img {
+        width: 300px;
+        height: 180px;
+    }
+
+    #objetivo img{
+        width: 300px;
+        align-self: center;
+    }
+
+    #indice {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #indice > div {
+        width: 500px;
+    }
+
+    .indice-bar {
+        width: 480px;
+        border-radius: 10px;
+        border: 0;
+    }
+
+    form > div:first-child {
+        row-gap: 10px;
+    }
+
+    textarea {
+        max-width: 265px;
+        min-width: 265px;
+    }
+
+    footer {
+        width: 580px;
+        padding: 10px 25px 10px 25px;
+    }
+
+    footer > div {
+        justify-content: center;
+        column-gap: 80px;
+    }
+
+    .logos {
+        display: none;
+    }
+}
+
+@media (max-width: 500px){
+    header{
+        width: 420px;
+        height: 165px;
+    }
+
+    header h1 {
+    font-size: 2.275rem; 
+    }
+
+    header h2 {
+        font-size: 1.775rem;
+    }
+
+    header h1, h2 {
+        margin: 0;
+        height: 30px;
+    }
+
+    .page-icon {
+        display: none;
+    }
+
+    .developer-logo {
+        width: 80px;
+    }
+
+    .headerbar {
+        width: 435px;
+    }
+
+    .nav-inter {
+        width: 370px;
+    }
+
+    main {
+        width: 420px;
+    }
+
+    section{
+        padding: 0;
+    }
+
+    .apresentation {
+        row-gap: 45px;
+    }
+    
+    .apresentation p {
+        width: 290px;
+        margin: 0;
+    }
+
+    .apresentation .tittle {
+        width: 100%;
+    }
+
+    .apresentation > div:last-child {
+        justify-content: center;
+    }
+
+    .apresentation-bar {
+        width: 390px;
+        border-radius: 5px;
+    }
+
+    .first {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .first h1 {
+        font-size: 3.9125rem;
+    }
+
+    .first h2 {
+        font-size: 2.35rem;
+    }
+
+    .first > div:last-child{
+        display: none;
+    }
+
+    #introducao > div, #objetivo > div {
+        width: 100%;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    #introducao p, #objetivo p {
+        width: 390px;
+        margin: 0;
+    }
+
+    #introducao img {
+        width: 300px;
+        height: 180px;
+    }
+
+    #objetivo img{
+        width: 300px;
+        align-self: center;
+    }
+
+    #indice {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #indice > div {
+        width: 400px;
+    }
+
+    .indice-bar {
+        width: 380px;
+        border-radius: 10px;
+        border: 0;
+    }
+
+    form > div:first-child {
+        row-gap: 10px;
+    }
+
+    textarea {
+        max-width: 265px;
+        min-width: 265px;
+    }
+
+    footer {
+        width: 420px;
+        padding: 10px 25px 10px 25px;
+    }
+
+    footer > div {
+        justify-content: center;
+        column-gap: 50px;
+    }
+
+    footer > p {
+        text-align: center;
+    }
+
+    .logos {
+        display: none;
+    }
+}

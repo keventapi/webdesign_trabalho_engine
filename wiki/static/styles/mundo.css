@@ -81,12 +81,14 @@ header h2 {
     border-radius: 10px 10px 0 0;
     background-color: rgba(24, 23, 42, 0.8);
     box-shadow: 0 2px 20px 3px rgb(21,65,100);
+    position: sticky;
+    top: 10px;
 }
 
 .nav-main ul {
     flex-direction: column;
     row-gap: 8px;
-    width: 201px;
+    width: 204px;
     height: 194px;
     list-style: none;
     background-color: rgba(255, 255, 255, 0.95);
@@ -137,6 +139,16 @@ header h2 {
     object-fit: contain;
 }
 
+.nav-main .active {
+    column-gap: 2px;
+}
+
+.active a {   
+    background-color: rgb(219, 219, 219);
+    padding: 2px 4px;
+    border-radius: 5px;
+}
+
 main {
     margin-top: 50px;
     flex-wrap: wrap;
@@ -178,7 +190,9 @@ main {
     margin-top: 40px;
     background-color: rgba(255, 255, 255, 0.95); 
     border-radius: 8px;
-    justify-content: center; 
+    justify-content: center;
+    position: sticky;
+    top: 10px;
 }
 
 .nav-inter ul {
@@ -196,6 +210,20 @@ main {
     font-family: "Inter", sans-serif;
     font-size: 0.8125rem;
     font-weight: normal;
+}
+
+.nav-inter a:hover, .nav-horizontal a:hover{
+    font-weight: 500;
+}
+
+.nav-main a:hover {
+    background-color: rgb(219, 219, 219);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.nav-main li:nth-child(2) a:hover{
+    padding: 2px 4px;
 }
 
 section {
@@ -221,12 +249,17 @@ section {
     object-fit: contain;
 }
 
-.historia-conteudo{
+#historia {
+    padding-right: 20px;
+    margin-bottom: 35px;
+}
+
+#historia .conteudo{
     column-gap: 30px;
     margin-left: 20px;
 }
 
-.historia-texto {
+#historia .texto {
     width: 380px;
     flex-direction: column;
     text-align: justify;
@@ -234,66 +267,47 @@ section {
     font-weight: 300;
 }
 
-.historia-imagem{
-    width: 290px;
+#historia .imagem{
+    width: 310px;
     flex-direction: column;
+    margin-top: 15px;
 }
 
-.historia-imagem img {
+#historia .imagem img {
     width: 100%;
     height: 280px;
     border-radius: 10px;
 }
 
-.historia-imagem p {
+#historia .imagem p {
     font-family: "Inter", sans-serif;
     font-weight: 300;
 }
 
-table {
-    width: 590px;
-    background-color: rgba(0, 0, 0, 0.2);
-    align-self: center;
-    border-collapse: collapse;
-    font-family: "Inter", sans-serif;
-    font-weight: 250;
-    font-size: 0.8125rem;
+.section-bar {
+    width: 600px;
 }
 
-table tr {
-    border-bottom: 1px solid white;
+.section-bar, .personagens-bar {
+    height: 5px;
+    background-color: rgb(217, 217, 217);
+    border: 0;
+    border-radius: 2px;
 }
 
-table th {
-    font-weight: 500;
-    border-right: 1px solid white;
-    padding: 0 10px 0 10px;
-    text-align: center;
+#personagens-principais .subtopico {
+    margin-bottom: 20px;
 }
 
-table th:last-child {
-    border-right: 0;
-    text-align: center;
+.personagens-bar {
+    width: 520px;
 }
 
-table td {
-    border-right: 1px solid white;
-    text-align: center;
-}
-
-table td:last-child {
-    border-right: 0;
-    text-align: center;
-}
-
-/*personagem card*/
 .personagem{
-    width: 100%;
+    width: 95%;
+    margin: 40px 20px 50px;
     background-color: rgba(0, 0, 0, 0.1);
     font-family: "Inter", sans-serif;
-    flex-direction: column;
-    padding: 20px;
-    margin: 30px;
 }
 
 .personagem > div {
@@ -442,4 +456,363 @@ footer > div {
 .row {
     display: flex;
     width: 100%;
+}
+
+@media (min-width: 1101px){
+    .nav-horizontal {
+        display: none;
+    }
+}
+
+@media (max-width: 1100px){
+    main{
+        column-gap: 20px;
+    }
+
+    .container {
+        width: 680px;
+    }
+
+    section {
+        padding: 0 20px;
+    }
+
+    #historia .imagem img{
+        height: auto;
+    }
+
+    .nav-horizontal {
+        display: none;
+    }
+
+    footer {
+        width: 680px;
+        margin-left: 237px;
+
+    }
+
+    .logos {
+        margin-left: 40px;
+        margin-right: 100px;
+    }
+
+}
+
+@media (max-width: 920px) {
+    header{
+        width: 720px;
+        height: 165px;
+    }
+
+    .headerbar {
+        width: 760px;
+    }
+
+    .topico {
+        margin: 0 15% 32px
+    }
+
+    main{
+        column-gap: 20px;
+    }
+
+    .container {
+        width: 680px;
+    }
+
+    section{
+        padding: 0 20px;
+    }
+
+    .nav-main {
+        display: none;
+    }
+
+    .nav-inter {
+        top: 48px;
+    }
+
+    .nav-horizontal {
+        display: flex;
+        width: 570px;
+        height: 38px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        align-content: center;
+        border-radius: 5px 5px 0 0;
+        background-color: rgba(24, 23, 42, 0.8);
+        box-shadow: 0 1px 10px 1px rgba(21,65,100, 0.2);
+        position: sticky;
+        top: 10px;
+    }
+
+    .nav-horizontal ul {
+        width: 550px;
+        font-size: 1rem;
+        justify-content: center;
+        list-style: none;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 5px 5px 0 0;
+        border: 0;
+        margin: 0;
+        padding: 5px 10px 5px 10px;
+        column-gap: 5px;
+    }
+
+    .nav-horizontal li {
+        column-gap: 5px;
+    }
+
+    .nav-horizontal a {
+        text-decoration: none;
+        color: black;
+        font-family: "Inter", sans-serif;
+        font-size: 0.8125rem;
+        font-weight: normal;
+    }
+
+    .nav-page-icon {
+        width: 16px;
+    }
+
+    .nav-inter {
+        margin-top: 0;
+        border-radius: 0 0 8px 8px;
+    }
+
+    footer {
+        width: 680px;
+        padding: 10px 25px 10px 25px;
+        margin: 80px auto;
+    }
+
+    footer > div {
+        justify-content: center;
+        column-gap: 100px;
+    }
+
+    .logos {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    header{
+        width: 530px;
+        height: 165px;
+    }
+
+    header h1 {
+    font-size: 2.275rem; 
+    }
+
+    header h2 {
+        font-size: 1.775rem;
+    }
+
+    header h1, h2 {
+        margin: 0;
+        height: 30px;
+    }
+
+    .page-icon {
+        display: none;
+    }
+
+    .developer-logo {
+        width: 80px;
+    }
+
+    .headerbar {
+        width: 545px;
+    }
+
+    .container {
+        width: 520px;
+    }
+
+    .nav-inter {
+        top: 42px;
+    }
+
+    .nav-horizontal {
+        width: 480px;
+        height: 32px;
+    }
+
+    .nav-horizontal ul {
+        width: 465px;
+        padding: 2px;
+        column-gap: 15px;
+    }
+
+    .nav-horizontal ul img {
+        display: none;
+    }
+
+    .nav-inter {
+        width: 400px;
+        height: 19px;
+    }
+
+    section{
+        padding: 0 20px;
+    }
+
+    .section-bar {
+        width: 470px;
+    }
+
+    #personagens-principais {
+        padding: 0px 5px 0 10px;
+    }
+
+    .personagens-bar {
+        width: 400px;
+    }
+
+    .card {
+        justify-content: flex-start;
+        row-gap: 30px;
+    }
+
+    .card h4 {
+        font-size: 0.725rem;
+    }
+
+    .card img {
+        width: 145px;
+        height: auto;
+    }
+
+    .card div {
+        width: 145px;
+        
+    }
+
+    .card li {
+        width: 115px;
+    }
+
+    footer {
+        width: 520px;
+        padding: 10px 25px 10px 25px;
+    }
+
+    footer > div {
+        justify-content: center;
+        column-gap: 80px;
+    }
+
+    .logos {
+        display: none;
+    }
+}
+
+@media (max-width: 500px){
+    header{
+        width: 420px;
+        height: 165px;
+    }
+
+    header h1 {
+    font-size: 2.275rem; 
+    }
+
+    header h2 {
+        font-size: 1.775rem;
+    }
+
+    header h1, h2 {
+        margin: 0;
+        height: 30px;
+    }
+
+    .page-icon {
+        display: none;
+    }
+
+    .developer-logo {
+        width: 80px;
+    }
+
+    .headerbar {
+        width: 435px;
+    }
+
+    .container {
+        width: 420px;
+        border-radius: 10px;
+    }
+
+    .nav-horizontal {
+        width: 380px;
+        height: 45px;
+    }
+
+    .nav-horizontal ul {
+        width: 360px;
+        text-align: center;
+        align-items: center;
+        padding: 2px 5px;
+        border-radius: 3px 3px 0 0;
+        column-gap: 5px;
+    }
+
+    .nav-horizontal ul img {
+        display: none;
+    }
+
+    .nav-inter {
+        width: 320px;
+        height: 17px;
+    }
+
+    section{
+        padding: 0 20px;
+    }
+
+    .section-bar {
+        width: 400px;
+    }
+
+    .imagem {
+        display: none;
+    }
+
+    .card img {
+        width: 120px;
+        height: auto;
+    }
+
+    .card div {
+        width: 120px; 
+    }
+
+    .card li {
+        width: 93px;
+    }
+
+    .descricao {
+        row-gap: 8px;
+    }
+
+    footer {
+        width: 420px;
+        padding: 10px 25px 10px 25px;
+    }
+
+    footer > div {
+        justify-content: center;
+        column-gap: 50px;
+    }
+
+    footer > p {
+        text-align: center;
+    }
+
+    .logos {
+        display: none;
+    }
 }

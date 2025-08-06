@@ -1,331 +1,278 @@
-{% load static %}
+{% load static%}
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>base</title>
+        <title>Itens e Habilidades</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static "styles/base.css" %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static "styles/itens_noreboot.css" %}">
+        <link rel="stylesheet" href="{% static "styles/itens.css" %}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-
-
-        <style>
-        
-            .carrossel-container {
-  position: relative;
-  width: 300px; /* Adjust as needed */
-  overflow: hidden;
-  margin: auto;
-}
-
-.carrossel-track {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.card { /* This class seems unused in your provided HTML. Ensure it's applied to your card elements if intended for styling. */
-  flex: 0 0 100%;
-  padding: 1rem;
-  box-sizing: border-box;
-  width:100%;
-}
-.carrossel-track  .card {
-    flex: 0 0 100%;
-    width: 300px;
-    max-width: 100%;
-    box-sizing: border-box; 
-    
-    /* Zere o padding horizontal para o card do carrossel */
-    padding-left: 0;
-    padding-right: 0;
-    /* Mantenha seu padding vertical de 15px top e 25px bottom */
-    padding-top: 15px;
-    padding-bottom: 25px;
-
-    
-}
-.carrossel-container {
-  position: relative;
-  width: 300px;
-  overflow: hidden;
-  margin: auto;
-  padding: 0 10px; /* Adiciona 10px de padding nas laterais */
-  box-sizing: border-box; /* Garante que o padding não aumente o width total */
-}
-
-.carrossel-track {
-  display: flex;
-  transition: transform 0.5s ease;
-  /* Se o container tem padding, a trilha precisa ser maior que o container "visível"
-     ou o translateX precisa ser ajustado. Geralmente, a Opção 1 é mais direta. */
-}
-    .card img {
-        max-width: 100%; /* Garante que as imagens não estourem o card */
-        height: auto;
-        /* ... outros estilos de imagem ... */
-    }
-
-/* Hide radio inputs */
-input[type="radio"][name="carrossel"] {
-  display: none;
-}
-
-/* Dynamically move carousel based on checked radio button */
-{% for skill in skills %}
-#slide{{ forloop.counter }}:checked ~ .carrossel-container .carrossel-track {
-  transform: translateX(-{{ forloop.counter0|add:"0" }}00%);
-}
-{% endfor %}
-
-/* Navigation dots (optional, as you're adding prev/next buttons) */
-.nav-dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 10; /* Ensure dots are above other elements if they overlap */
-}
-
-.nav-dots label {
-  background: black;
-  color: white;
-  padding: 6px 10px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-/* New styles for previous/next buttons */
-.carrossel-controls {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  padding: 0 10px; /* Add some padding from the edges */
-  box-sizing: border-box; /* Include padding in width calculation */
-  z-index: 10; /* Ensure controls are above other elements */
-}
-
-.carrossel-control-button {
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  border-radius: 50%; /* Make them circular */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1; /* Adjust line height for better vertical alignment of content */
-  transition: background 0.3s ease;
-}
-
-.carrossel-control-button:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-        </style>
     </head>
     <body>
         <header class="flex">
                 <div class="flex">
-                    <img src="{% static "img/hollow-knight-icon.png" %}" class="page-icon">
+                    <img src="{% static "img/hollow-knight-icon.png"%}" class="page-icon">
                     <div class="flex">
                         <h1> Hollow knight </h1>
                         <h2> wiki </h2>
                     </div>
                 </div>
-                <img src="{% static "img/teamcherry-icon.png" %}" class="developer-logo">
+                <img src="{% static "img/teamcherry-icon.png"%}" class="developer-logo">
         </header>
         <hr class="headerbar">
         <main class="flex">
-
             <div class="flex topico">
-                <img src="{% static "img/topico-vector.png" %}" alt="tópico vector">
+                <img src="{% static "img/topico-vector.png"%}" alt="tópico vector">
                 <h1>Itens e Habilidades</h1>
             </div>
-
-
             <nav class="flex nav-main">
                 <div class="flex nav-tittle">
                     <h3>Navegue por:</h3>
                     <h2>Hollow Knight</h2>
-                    <img src="{% static "img/decorator.png" %}" alt="decorador de titulo">
+                    <img src="{% static "img/decorator.png"%}" alt="decorador de titulo">
                 </div>
                 <ul class="flex">
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/hollow-knight-icon.png" %}" alt="inicio icone"><a href="">Início</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/mundo-icon.png" %}" alt="mundo icone"><a href="">Mundo</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/items-icon.png" %}" alt="itens e habilidades icone"><a href="">Itens e Habilidades</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/exploração-icon.png" %}" alt="exploração icone"><a href="">Exploração</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/inimigos-icon.png" %}" alt="Inimigos e chefes icone"><a href="">Inimigos e Chefes</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/hollow-knight-icon.png"%}" alt="inicio icone"><a href="..">Início</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "/img/mundo-icon.png"%}" alt="mundo icone"><a href="../mundo">Mundo</a></li>
+                    <li class="flex active"><img class="nav-page-icon" src="{% static "img/items-icon.png"%}" alt="itens e habilidades icone"><a href="../itens">Itens e Habilidades</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/exploração-icon.png"%}" alt="exploração icone"><a href="../exploracao">Exploração</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/inimigos-icon.png"%}" alt="Inimigos e chefes icone"><a href="../inimigos">Inimigos e Chefes</a></li>
                 </ul>
-                <img src="{% static "img/navbar-avatar.png" %}" alt="hollow knight personagem">
+                <img src="{% static "img/navbar-avatar.png"%}" alt="hollow knight personagem">
             </nav>
-
-
             <div class="flex container">
+                <nav class="nav-horizontal">
+                    <ul class="flex">
+                        <li class="flex"><img class="nav-page-icon" src="{% static "img/hollow-knight-icon.png"%}" alt="inicio icone"><a href="..">Início</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "/img/mundo-icon.png"%}" alt="mundo icone"><a href="../mundo">Mundo</a></li>
+                        <li class="flex active"><img class="nav-page-icon" src="{% static "img/items-icon.png"%}" alt="itens e habilidades icone"><a href="../itens">Itens e Habilidades</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "img/exploração-icon.png"%}" alt="exploração icone"><a href="../exploracao">Exploração</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "img/inimigos-icon.png"%}" alt="Inimigos e chefes icone"><a href="../inimigos">Inimigos e Chefes</a></li>
+                    </ul>
+                </nav>
                 <nav class="flex nav-inter">
                     <ul class="flex">
-                        <li><a href="">equipamentos</a></li>
-                        <li><a href="">feitiços skills e artes do ferrão</a></li>
+                        <li><a href="#equipamentos">Equipamentos</a></li>
+                        <li><a href="#fei-ski-artfer">Feitiços, Skills e Artes do Ferrão</a></li>
                     </ul>
-
                 </nav>
-                <section class="flex">
+                <section class="flex" id="equipamentos">
                     <div class="flex subtopico">
-                        <img src="{% static "img/subtopico-vector.png" %}" alt="subtopico vector">
-                        <h2>equipamentos</h2>
+                        <img src="{% static "img/topico-vector.png"%}" alt="tópico vector">
+                        <h2>Equipamentos</h2>
                     </div>
                     <div class="flex conteudo">
-                        <div class="row first">
-                            <p>Em Hollow Knight, o Cavaleiro pode encontrar e equipar diversos itens ao longo de sua jornada. Entre os mais importantes estão os amuletos, que concedem habilidades passivas e modificações no estilo de jogo.
-Esses equipamentos são essenciais para adaptar a gameplay ao estilo do jogador, facilitando combates, movimentação ou coleta de recursos.</p>
-                        </div>
-
-                        <div class="subtopico-conteudo">
-                            <h1>1- Amuletos</h1>
-                            <p>Os amuletos são artefatos místicos que o Cavaleiro pode equipar em bancos, utilizando um recurso chamado Notches (entalhes). Cada amuleto ocupa um número específico de entalhes, e combinar os certos pode alterar drasticamente a experiência de jogo.</p>
-                            <table>
-                                <tr>
-                                    <th>Icone</th>
-                                    <th>Nome</th>
-                                    <th>Efeito</th>
-                                    <th>Custo em Notches</th>
-                                </tr>
-                                {% for amuleto in amuletos %}
-                                    <tr>         
-                                        <td> <img src="{{amuleto.img.url}}" alt="{{amuleto.nome}}" style="width: 32px; height: 32px;"> </td>
-                                        <td>{{amuleto.nome}}</td>
-                                        <td>{{amuleto.efeito}}</td>
-                                        <td>{{amuleto.custo}}</td>
-                                    </tr>
-                                {% endfor %}
-                            </table>
-                        </div>
-
-                        <div class="subtopico-conteudo">
-                            <h1>2- Mascaras Vessels e Pale Ores</h1>
-                            <p>Ao longo da jornada, o Cavaleiro pode melhorar seus atributos vitais encontrando fragmentos de máscaras, vessels e o precioso item conhecido como Pale Ore. Esses itens são fundamentais para aumentar a sobrevivência e a capacidade de exploração do jogador.</p>
-
-                            <h2>Mascaras</h2>
-                            <table>
-                                <tr>
-                                    <th>Icone</th>
-                                    <th>fragmentos Necessarios</th>
-                                    <th>Localização</th>
-                                </tr>
-                                {% for _ in "12345678123789123"|make_list %}
-                                    <tr>         
-                                        <td> <img src="{% static "img/frag-mascara.png" %}" alt="fragmento de mascara" style="width: 32px; height: 32px;"> </td>
-                                        <td>4 fragmentos </td>
-                                        <td><a href="{% static "img/mask_shard_location_01.png"%}">mapa</a></td>
-                                    </tr>
-                                {% endfor %}
-                            </table>
-                            <h2>Vessels</h2>
-                            <table>
-                                <tr>
-                                    <th>Icone</th>
-                                    <th>fragmentos Necessarios</th>
-                                    <th>Localização</th>
-                                </tr>
-                                {% for _ in "1234456545"|make_list %}
-                                    <tr>         
-                                        <td> <img src="{% static "img/vessel_fragment.png" %}" alt="fragmento de mascara" style="width: 32px; height: 32px;"> </td>
-                                        <td>3 fragmentos </td>
-                                        <td><a href="{% static "img/vessel_fragment_location.png"%}">mapa</a></td>
-                                    </tr>
-                                {% endfor %}
-                            </table>
-
-                            <h2>Pale Ore</h2>
-                            <table>
-                                <tr>
-                                    <th>Icone</th>
-                                    <th>fragmentos Necessarios</th>
-                                    <th>Localização</th>
-                                </tr>
-                                {% for _ in "12333"|make_list %}
-                                    <tr>         
-                                        <td> <img src="{% static "img/plae-ore-hollow-knight-wiki-guide.png" %}" alt="fragmento de mascara" style="width: 32px; height: 32px;"> </td>
-                                        <td>{{forloop.counter}} fragmentos </td>
-                                        <td><a href="{% static "img/pale_ore_location.webp"%}">mapa</a></td>
-                                    </tr>
-                                {% endfor %}
-                            </table>
-                        </div>
-
-                    <div class="subtopico-conteudo"> 
-                        <h1>3- skilss</h1>
-                        <br>
-                        {% for skill in skills %}
-                        <input type="radio" name="carrossel" id="slide{{ forloop.counter }}" {% if forloop.first %}checked{% endif %}>
-                        {% endfor %}
-
-                        <div class="carrossel-container">
-                            <div class="carrossel-track" style="width: {{ skills|length|add:"0" }}00%;">
-                                {% for skill in skills %}
-                                <div class="card"> 
-                                    <div class="flex card">
-                                        <img src="{{ skill.img.url }}" alt="{{ skill.name }}">
-                                        <div class="flex">
-                                            <h4>nome</h4>
-                                            <p>{{ skill.nome}}</p>
-                                        </div>
-                                        <div class="flex">
-                                            <h4>Efeito</h4>
-                                            <p>{{ skill.efeito }}</p>
-                                        </div>
-                                        <div class="flex">
-                                            <h4>Localização</h4>
-                                            <p>{{ skill.localizacao }}</p>
-                                        </div>
-                                        <div class="flex">
-                                            <h4>Observação</h4>
-                                            <p>{{ skill.observacao }}</p>
-                                        </div>
+                        <p>Em Hollow Knight, o Cavaleiro pode encontrar e equipar diversos itens ao longo de sua jornada. Entre os mais importantes estão os amuletos, que concedem habilidades passivas e modificações no estilo de jogo. Esses equipamentos são essenciais para adaptar a gameplay ao estilo do jogador, facilitando combates, movimentação ou coleta de recursos.</p>
+                        <ol>
+                            <li>
+                                Amuletos
+                                <div class="flex amuletos">
+                                    <div class="flex texto">
+                                        <hr class="lateral-bar">
+                                        <p>Os amuletos são artefatos místicos que o Cavaleiro pode equipar em bancos, utilizando um recurso chamado Notches (entalhes). Cada amuleto ocupa um número específico de entalhes, e combinar os certos pode alterar drasticamente a experiência de jogo.</p>
+                                    </div>
+                                    <div class="flex">
+                                        <table>
+                                            <tr>
+                                                <th>Icone</th>
+                                                <th>Nome</th>
+                                                <th>Efeito</th>
+                                                <th>Custo em Notches</th>
+                                            </tr>
+                                            {% for amuleto in amuletos %}
+                                                <tr>
+                                                    <td> <img src="{{amuleto.img.url}}" alt="{{amuleto.nome}}" style="width: 32px; height: 32px;"> </td>
+                                                    <td>{{amuleto.nome}}</td>
+                                                    <td>{{amuleto.efeito}}</td>
+                                                    <td>{{amuleto.custo}}</td>
+                                                </tr>
+                                            {% endfor %}
+                                        </table>
                                     </div>
                                 </div>
-                                {% endfor %}
-                            </div>
+                            </li>
+                            <hr class="inter-section-bar">
+                            <li>
+                                Máscaras e Vessels
+                                <div class="flex masc-vess-paleore">
+                                    <div class="flex texto">
+                                        <hr class="lateral-bar">
+                                        <p>Ao longo da jornada, o Cavaleiro pode melhorar seus atributos vitais encontrando fragmentos de máscaras, vessels e o precioso item conhecido como Pale Ore. Esses itens são fundamentais para aumentar a sobrevivência e a capacidade de exploração do jogador.</p>
+                                    </div>
+                                    <div class="flex">
+                                        <ul class="flex">
+                                            <li>
+                                                <span>Máscaras</span>
+                                                <table>
+                                                    <tr>
+                                                        <th>Icone</th>
+                                                        <th>Fragmentos Necessários</th>
+                                                        <th>Aumenta Vida</th>
+                                                    </tr>
+                                                   
+                                                {% for _ in "12345678123789123"|make_list %}
+                                                    <tr>         
+                                                        <td> <img src="{% static "img/frag-mascara.png" %}" alt="icone do fragmento de mascara"> </td>
+                                                        <td>4 fragmentos </td>
+                                                        <td><a href="{% static "img/mask_shard_location_01.png"%}">mapa</a></td>
+                                                    </tr>
+                                                {% endfor %}
 
-                            <div class="carrossel-controls">
-                                <label for="prevButton" class="carrossel-control-button" id="prevButton"><</label>
-                                <label for="nextButton" class="carrossel-control-button" id="nextButton">></label>
-                            </div>
-                            </div>
-                    <div class="subtopico-conteudo">
-                        <h1> artes do ferrão</h1>
-                        <br>
-                        <table>
-                                <tr>
-                                    <th>Icone</th>
-                                    <th>Nome</th>
-                                    <th>Efeito</th>
-                                    <th>Mestre</th>
-                                    <th>Localização</th>
-                                </tr>
-                                {% for arte in artes %}
-                                    <tr>         
-                                        <td> <img src="{{arte.img.url}}" alt="{{arte.nome}}" style="width: 32px; height: 32px;"> </td>
-                                        <td>{{arte.nome}}</td>
-                                        <td>{{arte.efeito}}</td>
-                                        <td>{{arte.mestre}}</td>
-                                        <td>{{arte.localizacao}}</td>
-                                    </tr>
-                                {% endfor %}
-                            </table>
-                            </div>
+                                                </table>
+                                            </li>
+                                            <li>
+                                                <span>Vessels</span>
+                                                <table>
+                                                    <tr>
+                                                        <th>Icone</th>
+                                                        <th>Fragmentos Necessários</th>
+                                                        <th>Efeito</th>
+                                                    </tr>
+                                                    {% for _ in "1234456545"|make_list %}
+                                                        <tr>         
+                                                            <td> <img src="{% static "img/vessel_fragment.png" %}" alt="fragmento de mascara" style="width: 32px; height: 32px;"> </td>
+                                                            <td>3 fragmentos </td>
+                                                            <td><a href="{% static "img/vessel_fragment_location.png"%}">mapa</a></td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                </table>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
                     </div>
-                        </div>
+                </section>
+                <hr class="section-bar">
+                <section class="flex" id="fei-ski-artfer">
+                    <div class="flex subtopico">
+                        <img src="{% static "img/subtopico-vector.png"%}" alt="subtopico vector">
+                        <h2>Feitiços, Skills e Artes do Ferrão</h2>
+                    </div>
+                    <div class="flex conteudo">
+                        <p>Ao longo da aventura, o Cavaleiro adquire habilidades mágicas (feitiços), técnicas de combate (skills) e movimentos avançados com seu prego (artes do ferrão).Essas habilidades são essenciais para o progresso, seja em combate ou exploração, e são desbloqueadas ao interagir com personagens e locais específicos.</p>
+                        <ol>
+                            <li>
+                                Feitiços
+                                <div class="flex feiticos">
+                                    <div class="flex texto">
+                                        <hr class="lateral-bar">
+                                        <p>Feitiços são ataques mágicos que consomem Alma. Eles permitem causar dano à distância, romper defesas inimigas ou alcançar locais inacessíveis.Existem versões aprimoradas dos feitiços, obtidas em áreas secretas.</p>
+                                    </div>
+                                    <div class="flex">
+                                        <table>
+                                            <tr>
+                                                <th>Icone</th>
+                                                <th>Nome</th>
+                                                <th>Efeito</th>
+                                                <th>Custo</th>
+                                                <th>Localização</th>
+                                            </tr>
+                                            {% for feitico in feiticos %}
+                                                <tr>
+                                                    <td><img src="{{feitico.img.url}}" alt="{{feitico.nome}} icone"></td>
+                                                    <td>{{feitico.nome}}</td>
+                                                    <td>{{feitico.efeito}}</td>
+                                                    <td>{{feitico.custo}}</td>
+                                                    <td><a href="">{{feitico.localizacao}}</a></td>
+                                                </tr>
+                                            {% endfor %}
+                                        </table>
+                                    </div>
+                                </div>
+                            </li>
+                            <hr class="inter-section-bar">
+                            <li>
+                                Skills
+                                <div class="flex masc-vess-paleore">
+                                    <div class="flex texto">
+                                        <hr class="lateral-bar">
+                                        <p>As Skills são habilidades passivas ou mecânicas especiais adquiridas ao longo da jornada. Elas ampliam as possibilidades de movimentação, exploração e combate. Desbloqueá-las é essencial para acessar áreas antes inacessíveis ou enfrentar inimigos com maior eficiência.</p>
+                                    </div>
+                                    <div class="flex cards">
+                                        <div id="carouselExample" class="carousel slide">
+                                            <div class="carousel-inner">
+                                                {% for skill in skills %}
+                                                    {% if forloop.first %}
+                                                        <div class="carousel-item active">
+                                                    {% else %}
+                                                        <div class="carousel-item">
+                                                    {% endif %}
+                                                    
+                                                        <div class="flex card">
+                                                            <img src="{{skill.img.url}}" alt="{{skill.nome}} imagem">
+                                                            <div class="flex">
+                                                                <h4>Nome</h4>
+                                                                <p>{{skill.nome}}</p>
+                                                            </div>
+                                                            <div class="flex">
+                                                                <h4>Efeito</h4>
+                                                                <p>{{skill.efeito}}</p>
+                                                            </div>
+                                                            <div class="flex">
+                                                                <h4>Localização</h4>
+                                                                <p>{{skill.localizacao}}</p>
+                                                            </div>
+                                                            <div class="flex">
+                                                                <h4>Observações</h4>
+                                                                <p>{{skill.observacao}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <hr class="inter-section-bar">
+                            <li>
+                                Artes do Ferrão
+                                <div class="flex artes-ferrao">
+                                    <div class="flex texto">
+                                        <hr class="lateral-bar">
+                                        <p>As Artes do Ferrão são técnicas de combate avançadas ensinadas por mestres ao longo da jornada. Essas habilidades ampliam os movimentos ofensivos do Cavaleiro, sendo fundamentais para enfrentar inimigos mais poderosos com estilo e eficiência.</p>
+                                    </div>
+                                    <div class="flex">
+                                        <table>
+                                            <tr>
+                                                <th>Icone</th>
+                                                <th>Nome</th>
+                                                <th>Efeito</th>
+                                                <th>Mestre</th>
+                                                <th>Localização</th>
+                                            </tr>
+                                            {% for arte in artes %}
+                                            <tr>
+                                                <td><img src="{{arte.img.url}}" alt="{{arte.nome}} icone"></td>
+                                                <td>{{arte.nome}}</td>
+                                                <td>{{arte.efeito}}</td>
+                                                <td>{{arte.mestre}}</td>
+                                                <td><a href="">{{arte.localizacao}}</a></td>
+                                            </tr>
+                                            {% endfor %}
+                                        </table>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
                     </div>
                 </section>
             </div>
@@ -336,56 +283,19 @@ Esses equipamentos são essenciais para adaptar a gameplay ao estilo do jogador,
                     <h3>Contatos</h3>
                     <p>Email: contact@teamcherry.com.au</p>
                     <div class="flex">
-                        <a href="https://twitter.com/TeamCherryGames" target="_blank"><img src="{% static "img/twitter.png" %}" alt="twitter icon"></a>
-                        <a href="https://www.youtube.com/user/teamcherrygames" target="_blank"><img src="{% static "img/youtube.png" %}" alt="youtube icon"></a>
+                        <a href="https://twitter.com/TeamCherryGames" target="_blank"><img src="{% static "img/twitter.png"%}" alt="twitter icon"></a>
+                        <a href="https://www.youtube.com/user/teamcherrygames" target="_blank"><img src="{% static "img/youtube.png"%}" alt="youtube icon"></a>
                         <a href="https://www.facebook.com/teamcherrygames" target="_blank"><img src="{% static "img/facebook.png" %}" alt="facebook icon"></a>
                     </div>
                 </div>
                 <div class="flex logos">
-                    <img src="{% static "img/hollow-knight-icon.png" %}">
-                    <img src="{% static "img/teamcherry-icon.png" %}">
+                    <img src="{% static "img/hollow-knight-icon.png"%}">
+                    <img src="{% static "img/teamcherry-icon.png"%}">
                 </div>
                 <a href="#" class="footer-feedback">Deixe <br> seu feedback!</a>
             </div>
             <p>© 2025 Hollow Knight Wiki  - Todos os direitos reservados à Team Cherry</p>
         </footer>
-        <script>
-            // JavaScript for handling previous/next buttons
-            document.addEventListener('DOMContentLoaded', function() {
-                const radioButtons = document.querySelectorAll('input[name="carrossel"]');
-                const prevButton = document.getElementById('prevButton');
-                const nextButton = document.getElementById('nextButton');
-                const totalSlides = radioButtons.length;
-                let currentSlideIndex = 0;
-
-                // Initialize currentSlideIndex based on initially checked radio button
-                // It's important to find the *index* of the initially checked button.
-                radioButtons.forEach((radio, index) => {
-                    if (radio.checked) {
-                        currentSlideIndex = index;
-                    }
-                });
-
-                function updateCarousel() {
-                    // Ensure the index is within bounds (0 to totalSlides - 1)
-                    if (currentSlideIndex < 0) {
-                        currentSlideIndex = totalSlides - 1;
-                    } else if (currentSlideIndex >= totalSlides) {
-                        currentSlideIndex = 0;
-                    }
-                    radioButtons[currentSlideIndex].checked = true;
-                }
-
-                prevButton.addEventListener('click', function() {
-                    currentSlideIndex--; // Decrement index
-                    updateCarousel();
-                });
-
-                nextButton.addEventListener('click', function() {
-                    currentSlideIndex++; // Increment index
-                    updateCarousel();
-                });
-            });
-        </script>
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </html>

@@ -27,7 +27,9 @@ class Exploracao(models.Model):
     img = models.ImageField(upload_to='exploração/', blank=True)
     chefes = models.ManyToManyField(Chefe, blank=True)
     npcs = models.ManyToManyField(Npc, blank=True)
-
+    descricao = models.TextField(default="", blank=True)
+    especial = models.BooleanField(default=False)
+    
     def __str__(self):
         return self.nome
 

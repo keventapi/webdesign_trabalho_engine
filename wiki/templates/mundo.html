@@ -15,7 +15,7 @@
     <body>
         <header class="flex">
                 <div class="flex">
-                    <img src="{% static "img/hollow-knight-icon.png" %}" class="page-icon">
+                    <img src="{% static "img/hollow-knight-icon.png"%}" class="page-icon">
                     <div class="flex">
                         <h1> Hollow knight </h1>
                         <h2> wiki </h2>
@@ -26,77 +26,85 @@
         <hr class="headerbar">
         <main class="flex">
             <div class="flex topico">
-                <img src="{% static "img/topico-vector.png" %}" alt="tópico vector">
+                <img src="{% static "img/topico-vector.png"%}" alt="tópico vector">
                 <h1>Mundo</h1>
             </div>
-
             <nav class="flex nav-main">
                 <div class="flex nav-tittle">
                     <h3>Navegue por:</h3>
                     <h2>Hollow Knight</h2>
-                    <img src="{% static "img/decorator.png" %}" alt="decorador de titulo">
+                    <img src="{% static "img/decorator.png"%}" alt="decorador de titulo">
                 </div>
                 <ul class="flex">
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/hollow-knight-icon.png" %}" alt="inicio icone"><a href="">Início</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/mundo-icon.png" %}" alt="mundo icone"><a href="">Mundo</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/items-icon.png" %}" alt="itens e habilidades icone"><a href="">Itens e Habilidades</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/exploração-icon.png" %}" alt="exploração icone"><a href="">Exploração</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/inimigos-icon.png" %}" alt="Inimigos e chefes icone"><a href="">Inimigos e Chefes</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/hollow-knight-icon.png"%}" alt="inicio icone"><a href="..">Início</a></li>
+                    <li class="flex active"><img class="nav-page-icon" src="{% static "/img/mundo-icon.png"%}" alt="mundo icone"><a href="../mundo">Mundo</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/items-icon.png"%}" alt="itens e habilidades icone"><a href="../itens">Itens e Habilidades</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/exploração-icon.png"%}" alt="exploração icone"><a href="../exploracao">Exploração</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/inimigos-icon.png"%}" alt="Inimigos e chefes icone"><a href="../inimigos">Inimigos e Chefes</a></li>
                 </ul>
-                <img src="{% static "img/navbar-avatar.png" %}" alt="hollow knight personagem">
+                <img src="{% static "img/navbar-avatar.png"%}" alt="hollow knight personagem">
             </nav>
-
             <div class="flex container">
-                <nav class="flex nav-inter">
+                <nav class="nav-horizontal">
                     <ul class="flex">
-                        <li><a href="">Introdução</a></li>
-                        <li><a href="">Objetivo</a></li>
-                        <li><a href="">Indice</a></li>
-                        <li><a href="">Destaques</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "img/hollow-knight-icon.png"%}" alt="inicio icone"><a href="..">Início</a></li>
+                        <li class="flex active"><img class="nav-page-icon" src="{% static "/img/mundo-icon.png"%}" alt="mundo icone"><a href="../mundo">Mundo</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "img/items-icon.png"%}" alt="itens e habilidades icone"><a href="../itens">Itens e Habilidades</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "img/exploração-icon.png"%}" alt="exploração icone"><a href="../exploracao">Exploração</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "img/inimigos-icon.png"%}" alt="Inimigos e chefes icone"><a href="../inimigos">Inimigos e Chefes</a></li>
                     </ul>
                 </nav>
-                <section class="flex historia">
+                <nav class="flex nav-inter">
+                    <ul class="flex">
+                        <li><a href="#historia">Historia</a></li>
+                        <li><a href="#personagens-principais">Personagens Principais</a></li>
+                    </ul>
+                </nav>
+                <section class="flex" id="historia">
                     <div class="flex subtopico">
-                        <img src="{% static "img/subtopico-vector.png" %}" alt="subtopico vector">
+                        <img src="{% static "img/subtopico-vector.png"%}" alt="subtopico vector">
                         <h2>História</h2>
                     </div>
-                    <div class="flex historia-conteudo">
-                        <div class="flex historia-texto">
+                    <div class="flex conteudo">
+                        <div class="flex texto">
                             <p>Hollow Knight se passa no antigo reino de Hallownest, um vasto mundo subterrâneo habitado por insetos e criaturas esquecidas. O reino, outrora próspero e cheio de vida, entrou em decadência após uma misteriosa infecção começar a se espalhar, corrompendo mentes e destruindo sua civilização.</p>
                             <p>O jogador assume o papel de um cavaleiro sem nome que adentra esse mundo em busca de respostas. À medida que explora ruínas, cidades abandonadas e templos sombrios, descobre fragmentos da história de Hallownest, seus governantes e o sacrifício feito para conter a infecção.</p>
                             <p>O enredo é contado de forma indireta, através de diálogos, descrições de itens e cenários. Essa abordagem cria uma atmosfera misteriosa e profunda, convidando o jogador a montar sua própria interpretação da narrativa enquanto descobre segredos ocultos do reino.</p>
                         </div>
-                        <div class="flex historia-imagem">
-                            <img src="{% static "img/mundo-main.jpeg" %}" alt="hollow knight personagem principal">
+                        <div class="flex imagem">
+                            <img src="{% static "img/mundo-main.jpeg"%}" alt="hollow knight personagem principal">
                             <p>O Hollow Knight, receptáculo criado para conter a infecção de Hallownest, selado no coração do reino como último sacrifício.</p>
                         </div>
                     </div>
                 </section>
-                <section class="flex">
+                <hr class="section-bar">
+                <section class="flex" id="personagens-principais">
                     <div class="flex subtopico">
                         <img src="{% static "img/subtopico-vector.png"%}" alt="subtopico vector">
-                        <h2>Card Personagem</h2>
+                        <h2>Personagens Principais</h2>
                     </div>
-                    <br>
+
                     {% for personagem in personagens %}
-                    <div class="flex personagem">
-                        <hr class="barra-lateral">
-                        <div class="flex">
-                            <div class="flex descricao">
-                                <h3>{{personagem.nome}}</h3>
-
-                                <p>{{personagem.descricao}}</p>
-                            </div>
-
-                            <div class="flex card">
-                                <img src="{{personagem.img.url}}" alt="personagem imagem">
-                                <div class="flex">
-                                    <h4>Info sobre o personagem</h4>
-                                    <p>{{personagem.funcao}}</p>
+                        <div class="flex personagem">
+                            <hr class="barra-lateral">
+                            <div class="flex">
+                                <div class="flex descricao">
+                                    <h3>{{personagem.nome}}</h3>
+                                    <p>{{personagem.descricao}}</p>
+                                </div>
+                                <div class="flex card">
+                                    <img src={{personagem.img.url}} alt="{{personagem.nome}} personagem imagem">
+                                    <div class="flex">
+                                        <h4>Info sobre o personagem</h4>
+                                        <p>{{personagem.funcao}}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        {% if not forloop.last %}
+                            <hr class="personagens-bar">
+                        {% endif %}
+                        
                     {% endfor %}
                 </section>
             </div>
@@ -107,9 +115,9 @@
                     <h3>Contatos</h3>
                     <p>Email: contact@teamcherry.com.au</p>
                     <div class="flex">
-                        <a href="https://twitter.com/TeamCherryGames" target="_blank"><img src="{% static "img/twitter.png" %}" alt="twitter icon"></a>
-                        <a href="https://www.youtube.com/user/teamcherrygames" target="_blank"><img src="{% static "img/youtube.png" %}" alt="youtube icon"></a>
-                        <a href="https://www.facebook.com/teamcherrygames" target="_blank"><img src="{% static "img/facebook.png"%}" alt="facebook icon"></a>
+                        <a href="https://twitter.com/TeamCherryGames" target="_blank"><img src="{% static "img/twitter.png"%}" alt="twitter icon"></a>
+                        <a href="https://www.youtube.com/user/teamcherrygames" target="_blank"><img src="{% static "img/youtube.png"%}" alt="youtube icon"></a>
+                        <a href="https://www.facebook.com/teamcherrygames" target="_blank"><img src="{% static "img/facebook.png" %}" alt="facebook icon"></a>
                     </div>
                 </div>
                 <div class="flex logos">

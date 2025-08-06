@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from .models import Amuleto, Skill, ArteDoFerrao, Chefe, Npc, InimigoComum, MiniChefe, Exploracao
+from .models import Amuleto, Skill, ArteDoFerrao, Chefe, Npc, InimigoComum, MiniChefe, Exploracao, Feitico
 # Create your views here.
 def index(request):
-    return render(request, 'base.html')
+    return render(request, 'index.html')
 
 def filter_skills(skills):
     skill = ""
@@ -20,24 +20,20 @@ def items_habilidades(request):
     amuletos = Amuleto.objects.all()
     skills = Skill.objects.all()
     artes = ArteDoFerrao.objects.all()
+    feiticos = Feitico.objects.all()
     context = {'amuletos': amuletos,
                'skills': skills,
-               'artes': artes}
+               'artes': artes,
+               'feiticos': feiticos}
     return render(request, "itens_habilidades.html", context)
 
 def mundo(request):
     hornet = Npc.objects.filter(nome="hornet").first()
-    radiance = Chefe.objects.filter(nome="radiance").first()
     palido = Npc.objects.filter(nome="pale king").first()
     sonhadoras = Npc.objects.filter(nome="dreamers").first()
     quirrel = Npc.objects.filter(nome="quirrel").first()
-    context = {"personagens": [hornet, radiance, palido, sonhadoras, quirrel]}
+    context = {"personagens": [hornet, palido, sonhadoras, quirrel]}
     return render(request, "mundo.html", context)
-
-
-def exploracao(request):
-    context = {}
-    return render(request, "exploracao.html", context)
 
 
 def inimigos_chefes(request):

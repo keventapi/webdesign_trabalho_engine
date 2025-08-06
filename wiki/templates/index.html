@@ -1,0 +1,153 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Início</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "styles/index.css" %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="flex">
+                <div class="flex">
+                    <img src="{% static "img/hollow-knight-icon.png" %}" class="page-icon">
+                    <div class="flex">
+                        <h1> Hollow knight </h1>
+                        <h2> wiki </h2>
+                    </div>
+                </div>
+                <img src="{% static "img/teamcherry-icon.png"%}" class="developer-logo">
+        </header>
+        <hr class="headerbar">
+        <main class="flex">
+            <nav class="flex nav-inter">
+                <ul class="flex">
+                    <li><a href="#introducao">Introdução</a></li>
+                    <li><a href="#objetivo">Objetivo</a></li>
+                    <li><a href="#indice">Indice</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                </ul>
+            </nav>
+            <section class="flex apresentation">
+                <div class="row first">
+                    <div class="flex tittle">
+                        <h1>Hollow Knight</h1>
+                        <h2>wiki</h2>
+                    </div>
+                    <div class="flex">
+                        <img src="{% static "img/hollow-knight-main.png"%}" alt="hollow knight main">
+                    </div>
+                </div>
+                <div class="row">
+                    <p>Descubra os mistérios de Hallownest e enfrente desafios em uma jornada épica por Hollow Knight.</p>
+                </div>
+            </section>
+            <hr class="apresentation-bar">
+            <section class="flex subtopico" id="introducao">
+                <h3><li>Introdução</li></h3>
+                <div class="flex">
+                    <img src="{% static "img/introducao-hollow-knight.png"%}" alt="introdução hollow knight">
+                    <p>Hollow Knight é um jogo de ação e aventura em estilo metroidvania, desenvolvido pela Team Cherry. Ambientado em Hallownest, um reino subterrâneo misterioso, o jogador explora ambientes sombrios, enfrenta inimigos desafiadores e desvenda segredos antigos enquanto evolui suas habilidades.</p>
+                </div>
+            </section>
+            <section class="flex subtopico" id="objetivo">
+                <h3><li>Objetivo</li></h3>
+                <div class="flex">
+                    <img src="{% static "img/objetivo-hollow-knight.png"%}" alt="objetivo hollow knight">
+                    <p>Em Hollow Knight, o objetivo do jogador é explorar o vasto e sombrio reino de Hallownest, enfrentando inimigos desafiadores, descobrindo segredos ocultos e enfrentando chefes poderosos. A missão do Cavaleiro é restaurar o equilíbrio do mundo, corrompido por uma infecção misteriosa, desvendando aos poucos a história esquecida do reino subterrâneo.
+O objetivo deste site é servir como uma wiki interativa e informativa sobre o universo de Hollow Knight, reunindo dados sobre personagens, chefes, áreas, habilidades e segredos do jogo. Aqui, jogadores novatos ou veteranos podem encontrar tudo o que precisam para se aprofundar na lore e avançar com mais segurança pela jornada em Hallownest.</p>
+                </div>
+            </section>
+            <section class="flex subtopico" id="indice">
+                <div class="flex">
+                    <h3><li>Índice</li></h3>
+                    <ol class="flex list-pag">
+                        <li>Início
+                            <ul>
+                                <li><a href="#introducao">Introdução ao jogo</a></li>
+                                <li><a href="#objetivo">Objetivo do site/wiki</a></li>
+                            </ul>
+                        </li>
+                        <li>Mundo
+                            <ul>
+                                <li><a href="/mundo#historia">História</a></li>
+                                <li><a href="/mundo#personagens-principais">Personagens</a></li>
+                            </ul>
+                        </li>
+                        <li>Itens e Habilidades
+                            <ul>
+                                <li><a href="/itens#equipamentos">Equipamentos</a></li>
+                                <li><a href="/itens#fei-ski-artfer">Feitiços, Skills e Artes do Ferrão</a></li>
+                            </ul>
+                        </li>
+                        <li>Exploração
+                            <ul>
+                                <li><a href="/exploracao#regioes">Regiões</a></li>
+                                <li><a href="/exploracao#interacoes">Interações</a></li>
+                                <li><a href="/exploracao#locali-especiais">Locais Especiais</a></li>
+                            </ul>
+                        </li>
+                        <li>Inimigos e Chefes
+                            <ul>
+                                <li><a href="/inimigos#chefes-princi">Chefes Principais</a></li>
+                                <li><a href="/inimigos#mini-chef-ini-comuns">Mini-Chefes e Inimigos Comuns</a></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <hr class="indice-bar">
+            <section class="flex subtopico" id="feedback">
+                <h3><li>Deixe seu feedback</li></h3>
+                <form action="" method="post" class="flex">
+                    <div class="flex column">
+                        <div class="flex flex-direction-column">
+                            <label for="nome">Seu nome:</label>
+                            <input type="text" name="nome" id="nome">
+                        </div>
+                        <div class="flex flex-direction-column">
+                            <label for="email">Endereço de email:</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="flex flex-direction-column">
+                            <label for="topico">Tópico</label>
+                            <input type="text" name="topico" id="topico">
+                        </div>
+                    </div>
+                    <div class="flex column flex-direction-column">
+                        <label for="descricao">Descreva como o site poderia melhorar:</label>
+                        <textarea name="descricao" id="descricao"></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+                </div>
+            </section>
+
+        </main>
+        <footer class="flex">
+            <div class="flex">
+                <div class="flex contatos">
+                    <h3>Contatos</h3>
+                    <p>Email: contact@teamcherry.com.au</p>
+                    <div class="flex">
+                        <a href="https://twitter.com/TeamCherryGames" target="_blank"><img src="{% static "img/twitter.png"%}" alt="twitter icon"></a>
+                        <a href="https://www.youtube.com/user/teamcherrygames" target="_blank"><img src="{% static "img/youtube.png"%}" alt="youtube icon"></a>
+                        <a href="https://www.facebook.com/teamcherrygames" target="_blank"><img src="{% static "img/facebook.png" %}" alt="facebook icon"></a>
+                    </div>
+                </div>
+                <div class="flex logos">
+                    <img src="{% static "img/hollow-knight-icon.png"%}">
+                    <img src="{% static "img/teamcherry-icon.png"%}">
+                </div>
+                <a href="#" class="footer-feedback">Deixe <br> seu feedback!</a>
+            </div>
+            <p>© 2025 Hollow Knight Wiki  - Todos os direitos reservados à Team Cherry</p>
+        </footer>
+    </body>
+</html>

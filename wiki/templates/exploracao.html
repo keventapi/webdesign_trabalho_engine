@@ -4,159 +4,180 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Hollow Knight Wiki - Exploração</title>
-        <meta name="description" content="Explore the regions, interactions, and special locations in Hollow Knight.">
+        <title>Exploração</title>
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static "styles/base.css" %}">
+        <link rel="stylesheet" href="{% static "styles/exploracao.css" %}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header class="flex">
-            <div class="flex">
-                <img src="{% static "img/hollow-knight-icon.png" %}" class="page-icon" alt="Hollow Knight Icon">
                 <div class="flex">
-                    <h1> Hollow knight </h1>
-                    <h2> wiki </h2>
+                    <img src="{% static "img/hollow-knight-icon.png"%}" class="page-icon">
+                    <div class="flex">
+                        <h1> Hollow knight </h1>
+                        <h2> wiki </h2>
+                    </div>
                 </div>
-            </div>
-            <img src="{% static "img/teamcherry-icon.png" %}" class="developer-logo" alt="Team Cherry Logo">
+                <img src="{% static "img/teamcherry-icon.png"%}" class="developer-logo">
         </header>
         <hr class="headerbar">
         <main class="flex">
             <div class="flex topico">
-                <img src="{% static "img/topico-vector.png" %}" alt="Tópico Vector">
+                <img src="{% static "img/topico-vector.png"%}" alt="tópico vector">
                 <h1>Exploração</h1>
             </div>
             <nav class="flex nav-main">
                 <div class="flex nav-tittle">
                     <h3>Navegue por:</h3>
                     <h2>Hollow Knight</h2>
-                    <img src="{% static "img/decorator.png" %}" alt="Decorador de Título">
+                    <img src="{% static "img/decorator.png"%}" alt="decorador de titulo">
                 </div>
                 <ul class="flex">
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/hollow-knight-icon.png" %}" alt="Início Ícone"><a href="">Início</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/mundo-icon.png" %}" alt="Mundo Ícone"><a href="">Mundo</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/items-icon.png" %}" alt="Itens e Habilidades Ícone"><a href="">Itens e Habilidades</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/exploração-icon.png" %}" alt="Exploração Ícone"><a href="">Exploração</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/inimigos-icon.png" %}" alt="Inimigos e Chefes Ícone"><a href="">Inimigos e Chefes</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/hollow-knight-icon.png"%}" alt="inicio icone"><a href="..">Início</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "/img/mundo-icon.png"%}" alt="mundo icone"><a href="../mundo">Mundo</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/items-icon.png"%}" alt="itens e habilidades icone"><a href="../itens">Itens e Habilidades</a></li>
+                    <li class="flex active"><img class="nav-page-icon" src="{% static "img/exploração-icon.png"%}" alt="exploração icone"><a href="../exploracao">Exploração</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/inimigos-icon.png"%}" alt="Inimigos e chefes icone"><a href="../inimigos">Inimigos e Chefes</a></li>
                 </ul>
-                <img src="{% static "img/navbar-avatar.png" %}" alt="Hollow Knight Personagem">
+                <img src="{% static "img/navbar-avatar.png"%}" alt="hollow knight personagem">
             </nav>
             <div class="flex container">
-                <nav class="flex nav-inter">
+                <nav class="nav-horizontal">
                     <ul class="flex">
-                        <li><a href="">Regiões</a></li>
-                        <li><a href="">Interações</a></li>
-                        <li><a href="">Localizações Especiais</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "img/hollow-knight-icon.png"%}" alt="inicio icone"><a href="..">Início</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "/img/mundo-icon.png"%}" alt="mundo icone"><a href="../mundo">Mundo</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "img/items-icon.png"%}" alt="itens e habilidades icone"><a href="../itens">Itens e Habilidades</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "img/exploração-icon.png"%}" alt="exploração icone"><a href="../exploracao">Exploração</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "img/inimigos-icon.png"%}" alt="Inimigos e chefes icone"><a href="../inimigos">Inimigos e Chefes</a></li>
                     </ul>
                 </nav>
-
-                <section class="flex">
+                <nav class="flex nav-inter">
+                    <ul class="flex">
+                        <li><a href="#regioes">Regiões</a></li>
+                        <li><a href="#interacoes">Interações</a></li>
+                        <li><a href="#locali-especiais">Localizações Especiais</a></li>
+                    </ul>
+                </nav>
+                <section class="flex" id="regioes">
                     <div class="flex subtopico">
-                        <img src="{% static "img/subtopico-vector.png" %}" alt="Subtópico Vector">
+                        <img src="{% static "img/topico-vector.png"%}" alt="tópico vector">
                         <h2>Regiões</h2>
                     </div>
-                    <div class="flex conteudo historia-conteudo">
-                        <div class="historia-texto">
-                            <p>O mundo de Hallownest é dividido em várias regiões interconectadas, cada uma com suas próprias características, desafios e segredos. Conhecer cada canto é essencial para o progresso e descoberta de segredos.</p>
-                        </div>
-                    </div>
-                    {% for mapa in mapas %}
-                    {% if mapa.mapaojc.img%}
-                    <div class="flex mapa">
-                        <hr class="barra-lateral">
-                        <div class="flex">
-                            <div class="flex descricao">
-                                <h3>{{ mapa.mapaojc.nome }}</h3>
-                                <p>adicionar dps sem entrada no banco de dados</p>
-                            </div>
-                            <div class="flex card">
-                                    <img src="{{mapa.mapaojc.img.url}}" alt="{{mapa.mapaojc.nome}}">
-                                <div class="flex">
-                                    <h4>Chefes:</h4>
-                                    <ul>
-                                        {% for inimigo in mapa.inimigos_list %}
-                                            <li> {{inimigo}} </li>
-                                        {% endfor %}
-                                    </ul>
+                    <div class="flex conteudo">
+                        <p>O mundo de Hallownest é dividido em várias regiões interconectadas, cada uma com suas peculiaridades, desafios e habitantes únicos. Conhecer cada canto é essencial para o progresso e descoberta de segredos.</p>
+                        {% for mapa in mapas %}
+                            {% if not mapa.mapaojc.especial %}
+                                <div class="flex regiao">
+                                    <hr class="barra-lateral">
+                                    <div class="flex">
+                                        <div class="flex descricao">
+                                            <div class="flex">
+                                                <h3>Nome:</h3>
+                                                <p>{{mapa.mapaojc.nome}}</p>
+                                            </div>
+                                            <div class="flex">
+                                                <h3>Chefes:</h3>
+                                                <ul>
+                                                    {% for inimigo in mapa.inimigos_list %}
+                                                       <li> {{inimigo}} </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                            <div class="flex">
+                                                <h3>NPCs:</h3>
+                                                <ul>
+                                                    {% for npc in mapa.npc_list %}
+                                                        <li>{{ npc }}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="flex imagem">
+                                            <img src="{{mapa.mapaojc.img.url}}" alt="{{mapa.mapaojc.nome}} imagem">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="flex">
-                                    <h4>NPCs:</h4>
-                                    <ul>
-                                        {% for npc in mapa.npc_list %}
-                                            <li>{{ npc }}</li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                                {% if not forloop.last %}
+                                    <hr class="inter-section-bar">
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
                     </div>
-                    {% endif %}
-                    {% endfor %}
                 </section>
-
-                <section class="flex">
+                <hr class="section-bar">
+                <section class="flex" id="interacoes">
                     <div class="flex subtopico">
-                        <img src="{% static "img/subtopico-vector.png" %}" alt="Subtópico Vector">
+                        <img src="{% static "img/topico-vector.png"%}" alt="tópico vector">
                         <h2>Interações</h2>
                     </div>
-                    <div class="flex conteudo historia-conteudo">
-                        <div class="historia-texto">
-                            <p>Durante a jornada, o jogador encontrará diversos personagens e elementos interativos que enriquecem a experiência e fornecem informações vitais para a progressão. Interagir com NPCs, ativar mecanismos ou descobrir passagens secretas é fundamental para desvendar todos os mistérios de Hallownest.</p>
-                            <h4>Diálogos:</h4>
-                            <p>Preste atenção aos diálogos com os NPCs! Muitos deles oferecem dicas valiosas sobre o enredo, locais secretos, habilidades e até mesmo sobre o próximo passo em sua jornada. Alguns NPCs são comerciantes ou oferecem serviços que facilitam a exploração.</p>
-                            <h4>Mecanismos:</h4>
-                            <p>Alavancas, botões e outros mecanismos desbloqueiam novas áreas, ativam plataformas ou abrem passagens. Fique atento a qualquer objeto que possa ser ativado, pois eles podem levar a segredos e recompensas.</p>
-                            <h4>Estátuas e altares:</h4>
-                            <p>Existem locais especiais, como estátuas e altares, que fornecem energia espiritual (Soul) para curar ou usar feitiços, além de pontos de salvamento (bancos) e fontes de Geo.</p>
-                        </div>
+                    <div class="flex conteudo">
+                        <p>Durante a jornada, o jogador encontrará diversos elementos interativos espalhados pelo mundo. Esses objetos oferecem pontos de descanso, progresso, armazenamento ou conexões narrativas importantes. Entender como cada tipo de interação funciona é essencial para sobreviver e explorar com eficiência.</p>
+                        <ul class="flex">
+                            <li>
+                                <span class="flex"><img src="{% static "img/banco.png"%}" alt="Banco icone">Bancos</span>
+                                <p>Pontos de descanso espalhados pelo mapa onde o jogador pode salvar seu progresso e reorganizar amuletos. São também o local de respawn após a morte.</p>
+                            </li>
+                            <li>
+                                <span class="flex"><img src="{% static "img/estacoes.png"%}" alt="Estações Icone">Estações</span>
+                                <p>Servem como pontos de teletransporte rápido pelo reino. As estações estão conectadas por uma linha de transporte operada por um besouro gigante.</p>
+                            </li>
+                            <li>
+                                <span class="flex"><img src="{% static "img/totens-alma.png"%}" alt="Totens da Alma icone">Totens da alma</span>
+                                <p>Estruturas que restauram a energia espiritual (alma) do Cavaleiro. Podem ser usadas para curar ou executar ataques especiais.</p>
+                            </li>
+                        </ul>
                     </div>
                 </section>
-
-                <section class="flex">
+                <hr class="section-bar">
+                <section class="flex" id="locali-especiais">
                     <div class="flex subtopico">
-                        <img src="{% static "img/subtopico-vector.png" %}" alt="Subtópico Vector">
+                        <img src="{% static "img/topico-vector.png"%}" alt="tópico vector">
                         <h2>Localizações Especiais</h2>
                     </div>
-                    <div class="flex conteudo historia-conteudo">
-                        <div class="historia-texto">
-                            <p>Hallownest está repleto de locais únicos que abrigam segredos, desafios e recompensas. Essas localizações podem ser passagens escondidas, áreas de chefes opcionais, ou até mesmo câmaras de tesouro. Explorar cada uma delas é essencial para quem deseja explorar todo o que o universo do jogo tem a oferecer.</p>
-                        </div>
-                    </div>
-                    {% for mapa in mapas %}
-                    {% if not mapa.mapaojc.img%}
-                    <div class="flex mapa">
-                        <hr class="barra-lateral">
-                        <div class="flex">
-                            <div class="flex descricao">
-                                <h3>{{ mapa.mapaojc.nome }}</h3>
-                                <p>adicionar dps sem entrada no banco de dados</p>
-                            </div>
-                            <div class="flex card">
-                                    <img src=".." alt="{{mapa.mapaojc.nome}}">
-                                <div class="flex">
-                                    <h4>Chefes:</h4>
-                                    <ul>
-                                        {% for inimigo in mapa.inimigos_list %}
-                                            <li> {{inimigo}} </li>
-                                        {% endfor %}
-                                    </ul>
+                    <div class="flex conteudo">
+                        <p>Além das regiões principais, o mundo conta com áreas únicas e marcantes, repletas de mistérios, desafios e recompensas. Essas localizações especiais oferecem experiências distintas e muitas vezes escondem segredos valiosos. Saber onde encontrá-las, o que representam e como acessá-las é essencial para quem deseja explorar tudo o que o universo do jogo tem a oferecer.</p>
+                        {% for mapa in mapas %}
+                            {% if not mapa.mapaojc.especial %}
+                                <div class="flex regiao">
+                                    <hr class="barra-lateral">
+                                    <div class="flex">
+                                        <div class="flex descricao">
+                                            <div class="flex">
+                                                <h3>Nome:</h3>
+                                                <p>{{mapa.mapaojc.nome}}</p>
+                                            </div>
+                                            <div class="flex">
+                                                <h3>Chefes:</h3>
+                                                <ul>
+                                                    {% for inimigo in mapa.inimigos_list %}
+                                                       <li> {{inimigo}} </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                            <div class="flex">
+                                                <h3>NPCs:</h3>
+                                                <ul>
+                                                    {% for npc in mapa.npc_list %}
+                                                        <li>{{ npc }}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="flex imagem">
+                                            <img src="{{mapa.mapaojc.img.url}}" alt="{{mapa.mapaojc.nome}} imagem">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="flex">
-                                    <h4>NPCs:</h4>
-                                    <ul>
-                                        {% for npc in mapa.npc_list %}
-                                            <li>{{ npc }}</li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                                {% if not forloop.last %}
+                                    <hr class="inter-section-bar">
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
                     </div>
-                    {% endif %}
-                    {% endfor %}
+                </section>
                 </section>
             </div>
         </main>
@@ -166,18 +187,18 @@
                     <h3>Contatos</h3>
                     <p>Email: contact@teamcherry.com.au</p>
                     <div class="flex">
-                        <a href="https://twitter.com/TeamCherryGames" target="_blank" rel="noopener noreferrer"><img src="{% static "img/twitter.png" %}" alt="Twitter Icon"></a>
-                        <a href="https://www.youtube.com/user/teamcherrygames" target="_blank" rel="noopener noreferrer"><img src="{% static "img/youtube.png" %}" alt="YouTube Icon"></a>
-                        <a href="https://www.facebook.com/teamcherrygames" target="_blank" rel="noopener noreferrer"><img src="{% static "img/facebook.png" %}" alt="Facebook Icon"></a>
+                        <a href="https://twitter.com/TeamCherryGames" target="_blank"><img src="{% static "img/twitter.png"%}" alt="twitter icon"></a>
+                        <a href="https://www.youtube.com/user/teamcherrygames" target="_blank"><img src="{% static "img/youtube.png"%}" alt="youtube icon"></a>
+                        <a href="https://www.facebook.com/teamcherrygames" target="_blank"><img src="{% static "img/facebook.png" %}" alt="facebook icon"></a>
                     </div>
                 </div>
                 <div class="flex logos">
-                    <img src="{% static "img/hollow-knight-icon.png" %}" alt="Hollow Knight Icon">
-                    <img src="{% static "img/teamcherry-icon.png" %}" alt="Team Cherry Icon">
+                    <img src="{% static "img/hollow-knight-icon.png"%}">
+                    <img src="{% static "img/teamcherry-icon.png"%}">
                 </div>
                 <a href="#" class="footer-feedback">Deixe <br> seu feedback!</a>
             </div>
-            <p>© 2025 Hollow Knight Wiki - Todos os direitos reservados à Team Cherry</p>
+            <p>© 2025 Hollow Knight Wiki  - Todos os direitos reservados à Team Cherry</p>
         </footer>
     </body>
 </html>

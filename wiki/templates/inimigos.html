@@ -4,135 +4,159 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Hollow Knight Wiki</title>
-        <meta name="description" content="A wiki for the game Hollow Knight.">
+        <title>Inimigos e Chefes</title>
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static "styles/base.css" %}">
+        <link rel="stylesheet" href="{% static "styles/inimigos.css" %}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header class="flex">
-            <div class="flex">
-                <img src="{% static "img/hollow-knight-icon.png" %}" class="page-icon" alt="Hollow Knight Icon">
                 <div class="flex">
-                    <h1> Hollow knight </h1>
-                    <h2> wiki </h2>
+                    <img src="{% static "img/hollow-knight-icon.png"%}" class="page-icon">
+                    <div class="flex">
+                        <h1> Hollow knight </h1>
+                        <h2> wiki </h2>
+                    </div>
                 </div>
-            </div>
-            <img src="{% static "img/teamcherry-icon.png" %}" class="developer-logo" alt="Team Cherry Logo">
+                <img src="{% static "img/teamcherry-icon.png"%}" class="developer-logo">
         </header>
         <hr class="headerbar">
         <main class="flex">
-            <div class="topico flex">
-                <img src="{% static "img/topico-vector.png" %}" alt="Tópico Vector">
-                <h1>Tópico</h1>
+            <div class="flex topico">
+                <img src="{% static "img/topico-vector.png"%}" alt="tópico vector">
+                <h1>Inimigos e Chefes</h1>
             </div>
             <nav class="flex nav-main">
                 <div class="flex nav-tittle">
                     <h3>Navegue por:</h3>
                     <h2>Hollow Knight</h2>
-                    <img src="{% static "img/decorator.png" %}" alt="Decorador de Título">
+                    <img src="{% static "img/decorator.png"%}" alt="decorador de titulo">
                 </div>
                 <ul class="flex">
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/hollow-knight-icon.png" %}" alt="Início Ícone"><a href="">Início</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/mundo-icon.png" %}" alt="Mundo Ícone"><a href="">Mundo</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/items-icon.png" %}" alt="Itens e Habilidades Ícone"><a href="">Itens e Habilidades</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/exploração-icon.png" %}" alt="Exploração Ícone"><a href="">Exploração</a></li>
-                    <li class="flex"><img class="nav-page-icon" src="{% static "img/inimigos-icon.png" %}" alt="Inimigos e Chefes Ícone"><a href="">Inimigos e Chefes</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/hollow-knight-icon.png"%}" alt="inicio icone"><a href="..">Início</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "/img/mundo-icon.png"%}" alt="mundo icone"><a href="../mundo">Mundo</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/items-icon.png"%}" alt="itens e habilidades icone"><a href="../itens">Itens e Habilidades</a></li>
+                    <li class="flex"><img class="nav-page-icon" src="{% static "img/exploração-icon.png"%}" alt="exploração icone"><a href="../exploracao">Exploração</a></li>
+                    <li class="flex active"><img class="nav-page-icon" src="{% static "img/inimigos-icon.png"%}" alt="Inimigos e chefes icone"><a href="../inimigos">Inimigos e Chefes</a></li>
                 </ul>
-                <img src="{% static "img/navbar-avatar.png" %}" alt="Hollow Knight Personagem">
+                <img src="{% static "img/navbar-avatar.png"%}" alt="hollow knight personagem">
             </nav>
             <div class="flex container">
-                <nav class="flex nav-inter">
+                <nav class="nav-horizontal">
                     <ul class="flex">
-                        <li><a href="">Introdução</a></li>
-                        <li><a href="">Objetivo</a></li>
-                        <li><a href="">Indice</a></li>
-                        <li><a href="">Destaques</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "img/hollow-knight-icon.png"%}" alt="inicio icone"><a href="..">Início</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "/img/mundo-icon.png"%}" alt="mundo icone"><a href="../mundo">Mundo</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "img/items-icon.png"%}" alt="itens e habilidades icone"><a href="../itens">Itens e Habilidades</a></li>
+                        <li class="flex"><img class="nav-page-icon" src="{% static "img/exploração-icon.png"%}" alt="exploração icone"><a href="../exploracao">Exploração</a></li>
+                        <li class="flex active"><img class="nav-page-icon" src="{% static "img/inimigos-icon.png"%}" alt="Inimigos e chefes icone"><a href="../inimigos">Inimigos e Chefes</a></li>
                     </ul>
                 </nav>
-
-                <section class="flex">
-                    {% for chefe in chefes %}
-                    <div class="flex personagem">
-                        <hr class="barra-lateral">
-                        <div class="flex">
-                            <div class="flex descricao">
-                                <h3>{{chefe.chefe.nome}}</h3>
-                                <p>{{chefe.chefe.descricao}}</p>
-                            </div>
-                            <div class="flex card">
-                                <img src="{{chefe.chefe.img.url}}" alt="{{chefe.nome}} image">
-                                <div class="flex">
-                                    <h4>Info sobre o personagem</h4>
-                                    <p>{{chefe.chefe.info_chefe}}</p>
-                                </div>
-                                <div class="flex">
-                                    <h4>Skills</h4>
-                                    <ul>
-                                        {% for skill in chefe.chefe_skills%}
-                                            <li>{{skill}}</li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </section>
-
-                <section class="flex">
-                    <div class="subtopico flex">
-                        <img src="{% static "img/subtopico-vector.png" %}" alt="Subtópico Vector">
-                        <h2>miniboss</h2>
-                    </div>
-                    <br>
-
-                    <table>
-                        <tr>
-                            <th>Icone</th>
-                            <th>Nome</th>
-                            <th>Local</th>
-                            <th>Dica</th>
-                            <th>Recompensa</th>
-                        </tr>
-                        {% for minichefe in minichefes %}
-                        <tr>
-                            <td><img src="{{minichefe.img.url}}" alt="Ícone do Minichefe" width="30" height="30"></td>
-                            <td>{{minichefe.nome}}</td>
-                            <td>{{minichefe.local}}</td>
-                            <td>{{minichefe.dica}}</td>
-                            <td>{{minichefe.recompensa}}</td>
-                        </tr>
-                        {% endfor %}
-                    </table>
-                </section>
-
-                <section class="flex">
+                <nav class="flex nav-inter">
+                    <ul class="flex">
+                        <li><a href="#chefes-princi">Chefes Principais</a></li>
+                        <li><a href="#mini-chef-ini-comuns">Mini-chefes e Inimigos Comuns</a></li>
+                    </ul>
+                </nav>
+                <section class="flex" id="chefes-princi">
                     <div class="flex subtopico">
-                        <img src="{% static "img/subtopico-vector.png" %}" alt="Subtópico Vector">
-                        <h2>inimigos</h2>
+                        <img src="{% static "img/topico-vector.png"%}" alt="tópico vector">
+                        <h2>Chefes Principais</h2>
                     </div>
-                    <br>
+                    <div class="flex conteudo">
+                        <div class="flex texto">
+                            <p>Em meio aos territórios hostis e corrompidos, os Chefes Principais representam os maiores desafios enfrentados pelos jogadores. Essas entidades poderosas não apenas guardam tesouros e segredos do mundo, como também são peças centrais da narrativa, com histórias profundas, habilidades únicas e um papel vital na evolução do protagonista.</p>
+                        </div>
+                        <ol>
+                            {% for chefe in chefes %}
+                                <li>
+                                    <span>{{chefe.chefe.nome}}</span>
+                                    <div class="flex chefe">
+                                        <hr class="barra-lateral">
+                                        <div class="flex">
+                                            <div class="flex descricao">
+                                                <p>{{chefe.chefe.descricao}}</p>
+                                            </div>
+                                            <div class="flex card">
+                                                <img src="{{chefe.chefe.img.url}}" alt="{{chefe.chefe.nome}} imagem">
+                                                <div class="flex">
+                                                    <h4>Info sobre o chefe</h4>
+                                                    <p>{{chefe.chefe.info_chefe}}</p>
+                                                </div>
+                                                <div class="flex">
+                                                    <h4>Skills</h4>
+                                                    <ul>
+                                                        {% for skill in chefe.chefe_skills %}
+                                                            <li>{{skill}}</li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% if not forloop.last %}
+                                    <hr class="chefes-bar">
+                                {% endif %}
+                            {% endfor %}
+                        </ol>  
+                    </div>
+                </section>
+                <hr class="section-bar">
+                <section class="flex" id="mini-chef-ini-comuns">
+                    <div class="flex subtopico">
+                        <img src="{% static "img/topico-vector.png"%}" alt="tópico vector">
+                        <h2>Mini-chefes e Inimigos Comuns</h2>
+                    </div>
+                    <ul class="flex">
 
-                    <table>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Região</th>
-                            <th>Dica</th>
-                            <th>Recompensa</th>
-                        </tr>
-                        {% for inimigo in inimigos %}
-                        <tr>
-                            <td>{{inimigo.nome}}</td>
-                            <td>{{inimigo.regiao}}</td>
-                            <td>{{inimigo.dificuldade}}</td>
-                            <td>{{inimigo.drop_em_geos}} geos </td>
-                        </tr>
-                        {% endfor %}
-                    </table>
+                        <li>
+                            <span>Mini-chefes</span>
+                            <div class="flex">
+                                <table>
+                                    <tr>
+                                        <th>Icone</th>
+                                        <th>Nome</th>
+                                        <th>Local</th>
+                                        <th>Dica</th>
+                                        <th>Recompensa</th>
+                                    </tr>
+                                    {% for minichefe in minichefes %}
+                                    <tr>  
+                                        <td><img src="{{minichefe.img.url}}" alt="{{minichefe.nome}} Ícone"></td>
+                                        <td>{{minichefe.nome}}</td>
+                                        <td>{{minichefe.local}}</td>
+                                        <td>{{minichefe.dica}}</td>
+                                        <td>{{minichefe.recompensa}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </table>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Inimigos Comuns</span>
+                            <div class="flex">
+                                <table>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Região</th>
+                                        <th>Dificuldade</th>
+                                        <th>Drop</th>
+                                    </tr>
+                                    {% for inimigo in inimigos %}
+                                    <tr>
+                                        <td>{{inimigo.nome}}</td>
+                                        <td>{{inimigo.regiao}}</td>
+                                        <td>{{inimigo.dificuldade}}</td>
+                                        <td>{{inimigo.drop_em_geos}} geos </td>
+                                    </tr>
+                                    {% endfor %}
+                                </table>
+                            </div>
+                        </li>
+                    </ul>
                 </section>
             </div>
         </main>
@@ -142,18 +166,18 @@
                     <h3>Contatos</h3>
                     <p>Email: contact@teamcherry.com.au</p>
                     <div class="flex">
-                        <a href="https://twitter.com/TeamCherryGames" target="_blank" rel="noopener noreferrer"><img src="{% static "img/twitter.png" %}" alt="Twitter Icon"></a>
-                        <a href="https://www.youtube.com/user/teamcherrygames" target="_blank" rel="noopener noreferrer"><img src="{% static "img/youtube.png" %}" alt="YouTube Icon"></a>
-                        <a href="https://www.facebook.com/teamcherrygames" target="_blank" rel="noopener noreferrer"><img src="{% static "img/facebook.png" %}" alt="Facebook Icon"></a>
+                        <a href="https://twitter.com/TeamCherryGames" target="_blank"><img src="{% static "img/twitter.png"%}" alt="twitter icon"></a>
+                        <a href="https://www.youtube.com/user/teamcherrygames" target="_blank"><img src="{% static "img/youtube.png"%}" alt="youtube icon"></a>
+                        <a href="https://www.facebook.com/teamcherrygames" target="_blank"><img src="{% static "img/facebook.png" %}" alt="facebook icon"></a>
                     </div>
                 </div>
                 <div class="flex logos">
-                    <img src="{% static "img/hollow-knight-icon.png" %}" alt="Hollow Knight Icon">
-                    <img src="{% static "img/teamcherry-icon.png" %}" alt="Team Cherry Icon">
+                    <img src="{% static "img/hollow-knight-icon.png"%}">
+                    <img src="{% static "img/teamcherry-icon.png"%}">
                 </div>
                 <a href="#" class="footer-feedback">Deixe <br> seu feedback!</a>
             </div>
-            <p>© 2025 Hollow Knight Wiki - Todos os direitos reservados à Team Cherry</p>
+            <p>© 2025 Hollow Knight Wiki  - Todos os direitos reservados à Team Cherry</p>
         </footer>
     </body>
 </html>

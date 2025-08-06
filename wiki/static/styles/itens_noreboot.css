@@ -1,0 +1,66 @@
+/* Reseta fontes e espaçamentos básicos que o Bootstrap Reboot altera */
+html, body {
+  all: revert;
+}
+
+/* Reverte tags comuns */
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li,
+table, tr, td, th,
+a, img, button, input, textarea, select {
+  all: revert;
+}
+
+/* Reaplica comportamento nativo em listas */
+ul, ol {
+  list-style-type: disc;
+  margin-block: 1em;
+  padding-inline-start: 40px;
+}
+
+/* Links devem ser sublinhados e na cor padrão */
+a {
+  text-decoration: underline;
+  color: -webkit-link;
+}
+
+/* Reverte o box-sizing aplicado pelo Bootstrap */
+*, *::before, *::after {
+  box-sizing: content-box;
+}
+
+/* Remove espaçamentos forçados de botões e inputs */
+button, input, select, textarea {
+  margin: 0;
+  padding: initial;
+  background: initial;
+  border: initial;
+  font: inherit;
+  line-height: normal;
+}
+
+/* Tabelas com borda separada e espaçamento normal */
+table {
+  border-collapse: separate;
+  border-spacing: 2px;
+  text-indent: 0;
+}
+
+/* Imagens não devem ser forçadas como display: block */
+img {
+  display: inline;
+  vertical-align: middle;
+}
+
+hr {
+  all: unset; /* limpa todos os estilos anteriores */
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(217, 217, 217);
+  border: none;
+  opacity: 1 !important; /* força a opacidade total */
+  margin: 1em 0; /* espaçamento opcional */
+}
+
+
