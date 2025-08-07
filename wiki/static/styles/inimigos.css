@@ -460,8 +460,12 @@ table div span{
     border-radius: 100%;
 }
 
-.facil {
+.baixo {
     background-color: #007419;
+}
+
+.médio {
+    background-color: #e3e700;
 }
 
 .dificil {
@@ -910,7 +914,7 @@ footer > div {
     }
 
     #mini-chef-ini-comuns ul {
-        padding-left: 20px;
+        display: none;
     }
 
     footer {
