@@ -79,7 +79,7 @@ O layout e o fluxo do site foram projetados no Figma antes do desenvolvimento.
 1. **Clone o repositório**:
 
 ```bash
-git clone https://github.com/keventapi/webdesign_trabalho_engine.git
+git clone --branch master https://github.com/keventapi/webdesign_trabalho_engine.git
 cd webdesign_trabalho_engine
 ```
 
